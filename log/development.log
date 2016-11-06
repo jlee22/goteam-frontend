@@ -1,0 +1,226 @@
+Started GET "/" for ::1 at 2016-11-05 20:25:52 -0700
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/jlee22/.rvm/gems/ruby-2.3.1/gems/better_errors-2.1.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /Users/jlee22/.rvm/gems/ruby-2.3.1/gems/better_errors-2.1.1/lib/better_errors/raised_exception.rb:8)
+
+PG::ConnectionBad - FATAL:  database "frontend_development" does not exist
+:
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/connection_handling.rb:91:in `connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/migration.rb:558:in `connection'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/migration.rb:545:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:36:in `call_app'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `block in call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/static.rb:136:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/engine.rb:522:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5430623746738307670);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-06 03:26:22 UTC], ["updated_at", 2016-11-06 03:26:22 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5430623746738307670)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-11-05 20:26:36 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 24ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-11-05 20:26:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (12.4ms)
+  Rendered /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.2ms)
+  Rendering /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (121.3ms)
+Started GET "/users/show" for ::1 at 2016-11-05 20:26:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Started GET "/users/1" for ::1 at 2016-11-05 20:26:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Started GET "/users/1" for ::1 at 2016-11-05 20:26:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7514ms (Views: 7505.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2526ms (Views: 2514.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4703ms (Views: 4687.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2016-11-06 11:09:38 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `json' for "1":String:
+  app/controllers/users_controller.rb:5:in `show'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/abstract_controller/base.rb:188:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:126:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:455:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/abstract_controller/base.rb:126:in `process'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionview-5.0.0.1/lib/action_view/rendering.rb:30:in `process'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal.rb:190:in `dispatch'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_controller/metal.rb:262:in `dispatch'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/routing/route_set.rb:725:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/etag.rb:25:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/conditional_get.rb:25:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/head.rb:12:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/session/abstract/id.rb:222:in `context'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/session/abstract/id.rb:216:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0.1/lib/active_record/migration.rb:552:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:36:in `call_app'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `block in call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `tagged'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/activesupport-5.0.0.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/static.rb:136:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+   () Users/jlee22/.rvm/gems/ruby-2.3.1@global/gems/railties-5.0.0.1/lib/rails/engine.rb:522:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+Started POST "/__better_errors/2db350bdea06cb57/variables" for ::1 at 2016-11-06 11:09:38 -0800
+Started GET "/users/1" for ::1 at 2016-11-06 11:10:00 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 131ms (Views: 117.1ms | ActiveRecord: 0.0ms)
+
+

@@ -1,0 +1,12 @@
+<h2>User Show Page</h2>
+
+<ul>
+<% if @user %>
+  <% @user.each do |field, value| %>
+    <li><%= "#{field}: #{value}" %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<%= @stats %>
+
