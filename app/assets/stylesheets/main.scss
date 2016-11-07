@@ -2,9 +2,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
+html {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin-left: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .fa {
