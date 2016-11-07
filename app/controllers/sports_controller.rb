@@ -3,25 +3,22 @@ class SportsController < ApplicationController
   before_action :define_url, :set_sports
 
   def index
-
     @uniq_sports = @sports.uniq { |sport| sport["category"] }
-    
-    # AJAX sport type (num of players)
   end
 
   def create
-    # p '*' * 30
-    # p params
-    # p '*' * 30
-    if request.xhr?
-      # All matches for sport name
-      @game_types = @sports.select { |sport| sport["category"] == params[:sport][:category]}
-      p @game_types
-      render json: @game_types
-    end
   end
 
   def show
+  end
+
+  def get_type
+    # Hit route from Sports Index view
+    if request.xhr?
+      # All matches for sport category
+      @game_types = @sports.select { |sport| sport["category"] == params[:sport][:category]}
+      render json: @game_types
+    end
   end
 
   private
