@@ -5,5 +5,5 @@ Rails.application.routes.draw do
       resources :stats, only:[:create,:update,:show]
     end
     resources :sessions, only:[:create]
-    resources :sports, only:[:index]
+    resources :sports, only:[:index,:create]
 end
