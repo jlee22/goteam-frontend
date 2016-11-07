@@ -1,7 +1,24 @@
-<%= form_for @session, url: {action: "create"}, html: {class: "register_form"} do |f| %>
-  <%= f.label :email %><br>
-  <%= f.text_field :email %><br>
+<%= form_for @session, remote: true do |f| %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %><br>
+
+  <h2>Address:</h2>
+  <%= f.label :street %><br>
+  <%= f.text_field :street %><br>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %><br>
+  <%= f.label :state %><br>
+  <%= f.text_field :state %><br>
+  <%= f.label :zip %><br>
+  <%= f.text_field :zip %><br>
+  <%= f.label :phone %><br>
+  <%= f.text_field :phone %><br>
+
   <%= f.label :password %><br>
   <%= f.text_field :password %><br>
-  <%= f.submit "Create" %>
+  <%= f.label :password_confirmation %><br>
+  <%= f.text_field :password_confirmation %><br>
+  <%= f.submit "Register" %>
 <% end %>

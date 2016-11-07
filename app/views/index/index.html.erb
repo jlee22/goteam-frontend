@@ -1,5 +1,4 @@
-<h1>Index#index</h1>
-<p>Find me in app/views/index/index.html.erb</p>
+<h1 align="center">Go-Team!!!</h1>
 
 <h1> Current Matches In Your Area: </h1>
 
@@ -11,13 +10,13 @@
       <% end %>
     </ul>
 
-    <% @sports.each_with_index do |sport,index| %> 
+    <% @sports.each_with_index do |sport,index| %>
       <div id="fragment-<%= index %>">
         <p><%= sport %></p>
       </div>
     <% end %>
   </div>
-  <div class="login">
+  <div class="index-login">
     <%= render 'sessions/login' %>
   </div>
 </div>
