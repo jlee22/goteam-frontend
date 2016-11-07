@@ -9,6 +9,9 @@ before_action :define_url
     # @sports = HTTParty.get(@url + "/sports.json")
     # @sport_names = find_sport(@sports, @stats)
   end
+  def new
+    @user = User.new
+  end
 end
 
 private
