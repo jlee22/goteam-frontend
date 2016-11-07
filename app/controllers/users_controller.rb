@@ -10,7 +10,7 @@ before_action :define_url
     # @sport_names = find_sport(@sports, @stats)
   end
   def new
-    @user = User.new
+    @user = ''
   end
 end
 
