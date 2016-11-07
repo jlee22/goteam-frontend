@@ -1,1 +1,9 @@
 <h2>Sports Index</h2>
+
+
+<% @uniq_sports.each do |sport| %>
+  <%= form_for(:sport, remote: true, html: {class: "submit-sport-form"}) do |f| %>
+    <%= f.hidden_field :category, value: sport["category"] %>
+    <%= f.submit sport["category"]  %>
+  <% end %>
+<% end %>
