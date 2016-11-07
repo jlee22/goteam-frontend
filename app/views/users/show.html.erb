@@ -1,53 +1,55 @@
-<h2>User Show Page</h2>
+<div id="user-show-container">
+  <h2>User Show Page</h2>
 
-<div class="user-info-container">
-  <h4>User Info:</h4>
+  <div class="user-info-container">
+    <h4>User Info:</h4>
 
-  <% if @user %>
-    <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
-      <span class="profile">
-        <%= @user['first_name'] %> <%= @user['last_name'] %>
-      </span> </p>
-    <p> <i class="fa fa-envelope-square" aria-hidden="true"></i>
-      <span class="profile">
-        <%= @user['email'] %>
-      </span> </p>
-    <p> <i class="fa fa-building" aria-hidden="true"></i>
-      <span class="profile">
-        <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
-      </span> </p>
-    <p> <i class="fa fa-phone-square" aria-hidden="true"></i>
-      <span class="profile">
-        <%= @user['phone'] %>
-      </span> </p>
-  <% end %>
-</div>
-
-<div class="stats-container">
-  <% if @stats %>
-  <h4>User Stats:</h4>
-    <% @stats.each do |k, sport| %>
-      <!-- <% if sport[0]['matches'] != 0 %> -->
-        <%if sport[1]['category'] == "Tennis"%>
-          Tennis <%= sport[1]['name'] %> Stats:<br>
-          Number of Wins: <%= sport[0]['win'] %><br>
-          Rating: <%= sport[0]['rating'] %><br>
-          Division: <%= sport[0]['division'] %><br>
-        <% elsif sport[1]['category'] == "Soccer"%>
-          Soccer <%= sport[1]['name'] %> Stats:<br>
-          Number of Wins: <%= sport[0]['win'] %><br>
-          Rating: <%= sport[0]['rating'] %><br>
-          Division: <%= sport[0]['division'] %><br>
-        <% end %>
-      <!-- <% end %> -->
+    <% if @user %>
+      <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <span class="profile">
+          <%= @user['first_name'] %> <%= @user['last_name'] %>
+        </span> </p>
+      <p> <i class="fa fa-envelope-square" aria-hidden="true"></i>
+        <span class="profile">
+          <%= @user['email'] %>
+        </span> </p>
+      <p> <i class="fa fa-building" aria-hidden="true"></i>
+        <span class="profile">
+          <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
+        </span> </p>
+      <p> <i class="fa fa-phone-square" aria-hidden="true"></i>
+        <span class="profile">
+          <%= @user['phone'] %>
+        </span> </p>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<h4><%= link_to 'Play Sports!!', sports_path %></h4>
+  <div class="stats-container">
+    <% if @stats %>
+    <h4>User Stats:</h4>
+      <% @stats.each do |k, sport| %>
+        <!-- <% if sport[0]['matches'] != 0 %> -->
+          <%if sport[1]['category'] == "Tennis"%>
+            Tennis <%= sport[1]['name'] %> Stats:<br>
+            Number of Wins: <%= sport[0]['win'] %><br>
+            Rating: <%= sport[0]['rating'] %><br>
+            Division: <%= sport[0]['division'] %><br>
+          <% elsif sport[1]['category'] == "Soccer"%>
+            Soccer <%= sport[1]['name'] %> Stats:<br>
+            Number of Wins: <%= sport[0]['win'] %><br>
+            Rating: <%= sport[0]['rating'] %><br>
+            Division: <%= sport[0]['division'] %><br>
+          <% end %>
+        <!-- <% end %> -->
+      <% end %>
+    <% end %>
+  </div>
 
-<div class="matches-container">
-  <h4>Upcoming Matches:</h4>
-  <h4>Recent Matches:</h4>
-  <%= link_to 'All Past Matches', '#' %>
+  <h4><%= link_to 'Play Sports!!', sports_path %></h4>
+
+  <div class="matches-container">
+    <h4>Upcoming Matches:</h4>
+    <h4>Recent Matches:</h4>
+    <%= link_to 'All Past Matches', '#' %>
+  </div>
 </div>

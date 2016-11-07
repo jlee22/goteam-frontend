@@ -1,0 +1,57 @@
+// Color Palette
+// #ff5714 orange
+// #66c3ff light blue
+// #dce1e9 off white
+// #0f4c5c dark blue teal
+// #2e7689 grey teal
+
+header {
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: .1em;
+  color: #ff5714;
+  background-color: #0f4c5c;
+  border-bottom: 8px solid #ff5714;
+}
+
+header a, header a:visited{
+  color: #dce1e9;
+}
+
+header a:hover {
+  color: #66c3ff;
+}
+
+.header-left {
+  font-size: 1.2em;
+  text-align: left;
+  width: 32%;
+  padding-left: 2px;
+}
+
+.header-middle {
+  font-size: 1.3em;
+  color: #dce1e9;
+  text-align: center;
+  width: 32%;
+}
+
+.header-right {
+  width: 32%;
+  font-size: .9em;
+  text-align: right;
+  padding-right: 2px;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+// hr.style1 {
+// 	border-top: 1px solid #8c8b8b;
+//   margin-left: 0%;
+//   margin-right: 2%;
+// }
+//
