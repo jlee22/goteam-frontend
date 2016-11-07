@@ -1,1 +1,7 @@
-_register.erb
+<%= form_for @session, url: {action: "create"}, html: {class: "login_form"} do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <%= f.submit "Create" %>
+<% end %>
