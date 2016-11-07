@@ -1,14 +1,39 @@
 <h2>User Show Page</h2>
 
+<div class="user-info-container">
+  <h4>User Info:</h4>
 
-<%= @user %>
-<ul>
-<% if @user %>
-  <% @user.each do |field, value| %>
-    <li><%= "#{field}: #{value}" %></li>
+  <% if @user %>
+    <p> <i class="fa fa-child" aria-hidden="true"></i>
+      <span class="profile">
+        <%= @user['first_name'] %> <%= @user['last_name'] %>
+      </span> </p>
+    <p> <i class="fa fa-envelope" aria-hidden="true"></i>
+      <span class="profile">
+        <%= @user['email'] %>
+      </span> </p>
+    <p> <i class="fa fa-building" aria-hidden="true"></i>
+      <span class="profile">
+        <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
+      </span> </p>
+    <p> <i class="fa fa-phone" aria-hidden="true"></i>
+      <span class="profile">
+        <%= @user['phone'] %>
+      </span> </p>
   <% end %>
-<% end %>
-</ul>
+</div>
 
-<%= @stats %>
-<% %>
+<div class="stats-container">
+  <h4>User Stats:</h4>
+    <% if @stats %>
+      <%= @stats.first.each do |field, value| %>
+        <li><%= "#{field}: #{value}" %></li>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="matches-container">
+  <h3>Upcoming Matches:</h3>
+  <h3>Recent Matches:</h3>
+  <%= link_to 'All Past Matches', '#' %>
+</div>
