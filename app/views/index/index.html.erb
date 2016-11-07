@@ -3,21 +3,25 @@
 
 <h1> Current Matches In Your Area: </h1>
 
+<div class="container-fluid">
+  <div id="tabs">
+    <ul>
+      <% @sports.each_with_index do |sport,index| %>
+        <li><a href="#fragment-<%= index %>"><%= sport['name'] %></a></li>
+      <% end %>
+    </ul>
 
-<div id="tabs">
-  <ul>
-    <% @sports.each_with_index do |sport,index| %>
-      <li><a href="#fragment-<%= index %>"><%= sport['name'] %></a></li>
+    <% @sports.each_with_index do |sport,index| %> 
+      <div id="fragment-<%= index %>">
+        <p><%= sport %></p>
+      </div>
     <% end %>
-  </ul>
-
-  <% @sports.each_with_index do |sport,index| %> 
-    <div id="fragment-<%= index %>">
-    <p><%= sport %></p>
-    </div>
-  <% end %>
+  </div>
 
 
+  <div class="login">
+    <%= render :login %>
+  </div>
 </div>
 <script>
   $( "#tabs" ).tabs({collapsible: true});
