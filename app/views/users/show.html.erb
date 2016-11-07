@@ -4,11 +4,11 @@
   <h4>User Info:</h4>
 
   <% if @user %>
-    <p> <i class="fa fa-child" aria-hidden="true"></i>
+    <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
       <span class="profile">
         <%= @user['first_name'] %> <%= @user['last_name'] %>
       </span> </p>
-    <p> <i class="fa fa-envelope" aria-hidden="true"></i>
+    <p> <i class="fa fa-envelope-square" aria-hidden="true"></i>
       <span class="profile">
         <%= @user['email'] %>
       </span> </p>
@@ -16,7 +16,7 @@
       <span class="profile">
         <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
       </span> </p>
-    <p> <i class="fa fa-phone" aria-hidden="true"></i>
+    <p> <i class="fa fa-phone-square" aria-hidden="true"></i>
       <span class="profile">
         <%= @user['phone'] %>
       </span> </p>
@@ -24,17 +24,24 @@
 </div>
 
 <div class="stats-container">
+  <% if @stats %>
   <h4>User Stats:</h4>
-    <% if @stats %>
-      <!-- @stats is an array of stats for each sport the user plays -->
-      <% @stats.each do |stats| %>
-        Need to find sport by id to display sport: <br>
-        Sport ID: <%= stats['sport_id'] %> <br>
-        Rating: <%= stats['rating'] %> <br>
-        Number of Wins: <%= stats['win'] %> <br>
-        Current Divison: <%= stats['division'] %> <br>
-      <% end %>
+    <% @stats.each do |k, sport| %>
+      <!-- <% if sport[0]['matches'] != 0 %> -->
+        <%if sport[1]['category'] == "Tennis"%>
+          Tennis <%= sport[1]['name'] %> Stats:<br>
+          Number of Wins: <%= sport[0]['win'] %><br>
+          Rating: <%= sport[0]['rating'] %><br>
+          Division: <%= sport[0]['division'] %><br><br>
+        <% elsif sport[1]['category'] == "Soccer"%>
+          Soccer <%= sport[1]['name'] %> Stats:<br>
+          Number of Wins: <%= sport[0]['win'] %><br>
+          Rating: <%= sport[0]['rating'] %><br>
+          Division: <%= sport[0]['division'] %><br><br>
+        <% end %>
+      <!-- <% end %> -->
     <% end %>
+  <% end %>
 </div>
 
 <div class="matches-container">
