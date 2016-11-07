@@ -11,9 +11,11 @@ before_action :define_url
   end
 
   def new
-    @user = ''
-    @create_user = HTTParty.post(@url + "/users/").to_json
   end
+
+  def create
+  end
+
 end
 
 private

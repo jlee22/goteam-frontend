@@ -1,27 +1,27 @@
-<%= form_for @user, url: @create_user, class: "what-form", :remote => true do |f| %>
-  <%= f.label :first_name %><br>
-  <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %><br>
-  <%= f.text_field :last_name %><br>
+<%= form_tag '', class:"register-form", :remote => true do %>
+  <%= label_tag :first_name %><br>
+  <%= text_field_tag :first_name %><br>
+  <%= label_tag :last_name %><br>
+  <%= text_field_tag :last_name %><br>
 
 
 
   <h2>Address:</h2>
-  <%= f.label :street %><br>
-  <%= f.text_field :street %><br>
-  <%= f.label :city %><br>
-  <%= f.text_field :city %><br>
-  <%= f.label :state %><br>
-  <%= f.text_field :state %><br>
-  <%= f.label :zip %><br>
-  <%= f.text_field :zip %><br>
-  <%= f.label :phone %><br>
-  <%= f.text_field :phone %><br>
+  <%= label_tag :street %><br>
+  <%= text_field_tag :street %><br>
+  <%= label_tag :city %><br>
+  <%= text_field_tag :city %><br>
+  <%= label_tag :state %><br>
+  <%= text_field_tag :state %><br>
+  <%= label_tag :zip %><br>
+  <%= text_field_tag :zip %><br>
+  <%= label_tag :phone %><br>
+  <%= text_field_tag :phone %><br>
 
   <h2>Password:</h2>
-  <%= f.label :password %><br>
-  <%= f.text_field :password %><br>
-  <%= f.label :password_confirmation %><br>
-  <%= f.text_field :password_confirmation %><br>
-  <%= f.submit "Register", class: 'button' %>
+  <%= label_tag :password %><br>
+  <%= text_field_tag :password %><br>
+  <%= label_tag :password_confirmation %><br>
+  <%= text_field_tag :password_confirmation %><br>
+  <%= submit_tag "Register"%>
 <% end %>
