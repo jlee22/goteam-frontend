@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  background-color: #262929;
+  display: flex;
+  justify-content: space-between;
+  padding: .1em;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.side1 {
+  margin-left: 2%;
+}
+
+.side2 {
+  margin-left: 7%;
+}
+
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+  margin-left: 0%;
+  margin-right: 2%;
+}
+
+header a, header a:visited{
+  color: #fff;
+}
+
+.header-left{
+  width: 32%;
+}
+
+.header-middle{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  width: 32%;
+}
+
+.header-right{
+  width: 32%;
+  color: #fff;
+  font-size: .9em;
+  text-align: right;
+}
