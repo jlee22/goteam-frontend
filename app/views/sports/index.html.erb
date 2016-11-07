@@ -2,8 +2,11 @@
 
 
 <% @uniq_sports.each do |sport| %>
-  <%= form_for(:sport, remote: true, html: {class: "submit-sport-form"}) do |f| %>
+  <div class="sport-container">
+  <%= form_for(:sport, url: "/sports/type", html: {class: "submit-sport-form"}) do |f| %>
     <%= f.hidden_field :category, value: sport["category"] %>
     <%= f.submit sport["category"]  %>
   <% end %>
+  </div>
 <% end %>
+
