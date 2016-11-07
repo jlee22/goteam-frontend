@@ -26,14 +26,14 @@
 <div class="stats-container">
   <h4>User Stats:</h4>
     <% if @stats %>
-      <%= @stats.first.each do |field, value| %>
-        <li><%= "#{field}: #{value}" %></li>
-      <% end %>
+      <% @stats.first['rating'] %>
+      <% @stats.first['win'] %>
+      <% @stats.first['division'] %>
     <% end %>
 </div>
 
 <div class="matches-container">
-  <h3>Upcoming Matches:</h3>
-  <h3>Recent Matches:</h3>
+  <h4>Upcoming Matches:</h4>
+  <h4>Recent Matches:</h4>
   <%= link_to 'All Past Matches', '#' %>
 </div>
