@@ -7,15 +7,15 @@
 <div id="tabs">
   <ul>
     <% @sports.each_with_index do |sport,index| %>
-      <li><a href="#fragment-<%= index %>">sport</a></li>
+      <li><a href="#fragment-<%= index %>"><%= sport['name'] %></a></li>
     <% end %>
   </ul>
-  
-  <div id="fragment-1">
-  </div>
-  <div id="fragment-2">
-  </div>
 
+  <% @sports.each_with_index do |sport,index| %> 
+    <div id="fragment-<%= index %>">
+    <p><%= sport %></p>
+    </div>
+  <% end %>
 
 
 </div>

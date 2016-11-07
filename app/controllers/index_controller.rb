@@ -3,7 +3,7 @@ class IndexController < ApplicationController
   
   def index
     @sports = HTTParty.get(@url + "/sports.json")
-    @matches = HTTParty.get(@url + "/matches.json")
+   # @matches = HTTParty.get(@url + "/matches.json")
   end
 
   def about
