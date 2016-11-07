@@ -1,9 +1,17 @@
+// Color Palette
+// #ff5714 orange
+// #66c3ff light blue
+// #dce1e9 off white
+// #0f4c5c dark blue teal
+// #2e7689 grey teal
+
 header {
   width: 100%;
-  background-color: #262929;
+  background-color: #0f4c5c;
   display: flex;
   justify-content: space-between;
-  padding: .1em;
+  padding: .2em;
+  border-bottom: 8px solid #ff5714;
 }
 
 header h1 {
@@ -34,7 +42,7 @@ header a, header a:visited{
 
 .header-middle{
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   width: 32%;
 }
@@ -44,4 +52,8 @@ header a, header a:visited{
   color: #fff;
   font-size: .9em;
   text-align: right;
+}
+
+.debug {
+  border: 1px solid red;
 }
