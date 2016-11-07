@@ -32,17 +32,19 @@
           Tennis <%= sport[1]['name'] %> Stats:<br>
           Number of Wins: <%= sport[0]['win'] %><br>
           Rating: <%= sport[0]['rating'] %><br>
-          Division: <%= sport[0]['division'] %><br><br>
+          Division: <%= sport[0]['division'] %><br>
         <% elsif sport[1]['category'] == "Soccer"%>
           Soccer <%= sport[1]['name'] %> Stats:<br>
           Number of Wins: <%= sport[0]['win'] %><br>
           Rating: <%= sport[0]['rating'] %><br>
-          Division: <%= sport[0]['division'] %><br><br>
+          Division: <%= sport[0]['division'] %><br>
         <% end %>
       <!-- <% end %> -->
     <% end %>
   <% end %>
 </div>
+
+<h4><%= link_to 'Play Sports!!', sports_path %></h4>
 
 <div class="matches-container">
   <h4>Upcoming Matches:</h4>
