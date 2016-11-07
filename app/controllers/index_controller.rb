@@ -2,6 +2,7 @@ class IndexController < ApplicationController
   before_action :define_url
   
   def index
+    @session = '' #Session.new
     @sports = HTTParty.get(@url + "/sports.json")
    # @matches = HTTParty.get(@url + "/matches.json")
   end
