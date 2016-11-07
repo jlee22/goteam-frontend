@@ -1,2 +1,16 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+// Target the sport linke
+// Replace link with type link
+
+$(document).on("turbolinks:load", function() {
+  var sportFormTarget = $(".submit-sport-form");
+
+  $(".submit-sport-form").on('ajax:success', function(event, response) {
+    console.log(response)
+    console.log("Success!")
+    // sportFormTarget.hide()
+  })
+
+  sportFormTarget.on('ajax:error', function(event, response) {
+    alert(response)
+  })
+})
