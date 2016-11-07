@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :stats, only:[:create,:update,:show]
     end
     resources :sessions, only:[:create]
-    resources :sports, only:[:index,:create]
+    resources :sports, only:[:index,:show]
 
     post "/sports/type", to: "sports#get_type"
 end

@@ -6,10 +6,8 @@ class SportsController < ApplicationController
     @uniq_sports = @sports.uniq { |sport| sport["category"] }
   end
 
-  def create
-  end
-
   def show
+    @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
   end
 
   def get_type

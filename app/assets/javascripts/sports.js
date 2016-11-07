@@ -1,19 +1,5 @@
 // Target the sport linke
-// Replace link with type link
-
-// $(document).on("turbolinks:load", function() {
-//   var sportFormTarget = $(".submit-sport-form");
-
-//   sportFormTarget.on('ajax:success', function(event, response) {
-//     console.log("Success!")
-//     console.log(response)
-//     // sportFormTarget.hide()
-//   })
-
-//   sportFormTarget.on('ajax:error', function(event, response) {
-//     alert(response)
-//   })
-// })
+// Replace link with game type links
 
 $(document).on("turbolinks:load", function() {
     $(".submit-sport-form").on("submit", function() {
