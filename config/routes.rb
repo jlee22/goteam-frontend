@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   root "index#index"
 
     resources :users, only:[:create, :show, :new] do
-
-
       resources :stats, only:[:create,:update,:show]
     end
     resources :sessions, only:[:create]

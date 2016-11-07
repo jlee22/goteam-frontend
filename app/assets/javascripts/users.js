@@ -2,10 +2,4 @@
 // All this logic will automatically be available in application.js.
 $(document).on('turbolinks:load', function(){
 
-
-  $(".register-form").on('submit', function(event, data, status, xhr){
-      console.log("success");
-
-    });
-
 })

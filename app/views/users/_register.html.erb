@@ -1,10 +1,8 @@
-<%= form_tag '', class:"register-form", :remote => true do %>
+<%= form_tag users_path, class:"register-form", :remote => true do %>
   <%= label_tag :first_name %><br>
   <%= text_field_tag :first_name %><br>
   <%= label_tag :last_name %><br>
   <%= text_field_tag :last_name %><br>
-
-
 
   <h2>Address:</h2>
   <%= label_tag :street %><br>
@@ -23,5 +21,5 @@
   <%= text_field_tag :password %><br>
   <%= label_tag :password_confirmation %><br>
   <%= text_field_tag :password_confirmation %><br>
-  <%= submit_tag "Register"%>
+  <%= submit_tag %>
 <% end %>
