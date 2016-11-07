@@ -2,18 +2,26 @@
 // All this logic will automatically be available in application.js.
 $(document).on('turbolinks:load', function(){
 
-      var $first_name  =  $('#_first_name');
-      var $last_name   =  $('#_last_name');
-      var $email       =  $('#_email');
-      var $password    =  $('#_password');
-      var $street      =  $('#_street');
-      var $city        =  $('#_city');
-      var $state       =  $('#_state');
-      var $zip         =  $('#_zip');
-      var $phone       =  $('#_phone');
-
   $(".register-form").on('submit', function(event, data, status, xhr){
-      console.log("success");
+      var $form        =  $(this);
+      var $first_name  =  $('#first_name').val();
+      var $last_name   =  $('#last_name').val();
+      var $email       =  $('#email').val();
+      var $password    =  $('#password').val();
+      var $street      =  $('#street').val();
+      var $city        =  $('#city').val();
+      var $state       =  $('#state').val();
+      var $zip         =  $('#zip').val();
+      var $phone       =  $('#phone').val();
+      var $city        =  $('#city').val();
+
+      var isValid =  $form.isValid();
+      console.log($form);
+      console.log($first_name);
+      console.log($last_name);
+      console.log($city);
+      console.log($city);
+
     //   var user = {
     //     first_name:   $first_name.val();
     //     last_name:    $last_name.val();
