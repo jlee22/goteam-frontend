@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :users, only:[:create, :show, :new] do
       resources :stats, only:[:create,:update,:show]
     end
-    resources :sessions, only:[:create]
+    resources :sessions, only:[:create, :destroy]
     resources :sports, only:[:index,:show]
 
     get "/login", to: "sessions#new"
