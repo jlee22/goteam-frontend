@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "index#index"
   get 'matches/show', :to => 'matches#show'
+  post 'matches/edit', :to => 'matches#update'
     resources :users, only:[:create, :show, :new] do
       resources :stats, only:[:create,:update,:show]
     end
