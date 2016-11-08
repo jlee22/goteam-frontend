@@ -1,0 +1,27 @@
+<%= form_tag users_path, class:"register-form" do %>
+  <%= label_tag :first_name %><br>
+  <%= text_field_tag :first_name %><br>
+  <%= label_tag :last_name %><br>
+  <%= text_field_tag :last_name %><br>
+  <%= label_tag :email %><br>
+  <%= email_field_tag :email %><br>
+
+  <h2>Address:</h2>
+  <%= label_tag :street %><br>
+  <%= text_field_tag :street %><br>
+  <%= label_tag :city %><br>
+  <%= text_field_tag :city %><br>
+  <%= label_tag :state %><br>
+  <%= text_field_tag :state %><br>
+  <%= label_tag :zip %><br>
+  <%= text_field_tag :zip %><br>
+  <%= label_tag :phone %><br>
+  <%= text_field_tag :phone %><br>
+
+  <h2>Password:</h2>
+  <%= label_tag :password %><br>
+  <%= password_field_tag :password %><br>
+  <%= label_tag :password_confirmation %><br>
+  <%= password_field_tag :password_confirmation %><br>
+  <%= submit_tag %>
+<% end %>
