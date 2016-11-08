@@ -7,6 +7,7 @@
 </div>
 
 <div class="header-right">
-  <!-- Need if current user logic here -->
-  <%= render 'layouts/login' %>
+  <% if logged_in? %>
+    <%= render 'layouts/login' %>
+  <% end %>
 </div>
