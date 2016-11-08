@@ -48,12 +48,16 @@ $(document).on("turbolinks:load", function() {
 
       request.done(function(response) {
         findMatchLinkTarget.addClass("hidden")
-        $("#cancel-search-link").removeClass("hidden")
+        matchResults()
       })
 
       request.fail(function(response) {
         alert(response);
       })
     })
+
+  var matchResults = function() {
+
+  }
   }
 
