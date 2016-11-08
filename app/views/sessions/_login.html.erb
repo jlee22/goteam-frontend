@@ -1,7 +1,12 @@
-<%= form_for @session do |f| %>
-  <%= f.label :email %><br>
-  <%= f.text_field :email %><br>
-  <%= f.label :password %><br>
-  <%= f.text_field :password %><br>
-  <%= f.submit "Create" %>
-<% end %>
+<div id="login-form-container">
+  <div id="login-form">
+    <%= form_tag sessions_path do %>
+      <%= label_tag :email %>:<br>
+      <%= text_field_tag :email %><br>
+      <%= label_tag :password %>:<br>
+      <%= text_field_tag :password %><br>
+      <%= submit_tag "Login", class:'btn-default' %>
+    <% end %>
+  </div>
+
+</div>

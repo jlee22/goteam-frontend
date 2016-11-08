@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :sessions, only:[:create]
     resources :sports, only:[:index,:create]
 
+    get "/login", to: "sessions#new"
     post "/sports/type", to: "sports#get_type"
 end
