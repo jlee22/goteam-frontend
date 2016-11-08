@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
   def show
+    @location = HTTParty.get(api_url + 'matches/#{:id}')
     @team = ''
   end
 
