@@ -1,20 +1,7 @@
 <h2>Match Show</h2>
-<h3>This match is at <%= @match["location"] %> at <%= @match["date"] %></h3>
 
-<div id='home-team-container'>
-  <ul>
-    <% @match.teams.first.each do |teammate| %>
-      <li><%= teammate["first_name"], teammate["last_name"] %></li>
-    <% end %>
-  </ul>
-</div>
-
-<div id='away-team-container'>
-  <ul>
-    <% @match.teams.last.each do |teammate| %>
-      <li><%= teammate["first_name"], teammate["last_name"] %></li>
-    <% end %>
-  </ul>
-</div>
-
-<%= link_to("My Profile", user_path(current_user)) %>
+<p>Rendering the score partial for checking</p>
+<%= render 'team', locals:{ team: @team1 }%>
+  <%= render 'score' %>
+  <%= render 'map' %>
+<%= render 'team', locals:{ team: @team2 } %>

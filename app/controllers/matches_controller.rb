@@ -1,4 +1,3 @@
 class MatchesController < ApplicationController
 
-  
 end
