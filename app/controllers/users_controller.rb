@@ -15,6 +15,18 @@ before_action :define_url
   end
 
   def create
+     HTTParty.post(@url + '/users', :body=>  {"user"=>
+      { "first_name"=>  'jeff',
+        "last_name" =>  'fish',
+        "email"     =>  '1@5453435431.com',
+        "password"  =>  '1234',
+        "street"    =>  '123 street',
+        "city"      =>  'city',
+        "state"     =>  'CA',
+        "zip"       =>  '767267',
+        "phone"     =>  '8053242984'
+      }
+    })
   end
 
 end
@@ -24,7 +36,22 @@ private
 def define_url
   @url = "https://api-goteam.herokuapp.com/api"
 end
+def register
+    # HTTParty.post(@url + '/users', :body=>{"user"=>{"email"=>'rachael.stammy@vonrueden.info', "password"=>'password'}})
 
+    HTTParty.post(@url + '/users', :body=>  {"user"=>
+      { "first_name"=>  'jeff',
+        "last_name" =>  'fish',
+        "email"     =>  '1@5453435431.com',
+        "password"  =>  '1234',
+        "street"    =>  '123 street',
+        "city"      =>  'city',
+        "state"     =>  'CA',
+        "zip"       =>  '767267',
+        "phone"     =>  '8053242984'
+      }
+    })
+end
 def find_sport(all_sports, user_stats)
   user_sports = []
   all_sports.each do |sport|

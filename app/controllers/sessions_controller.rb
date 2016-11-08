@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    p params
+     p params
      p sign_in
   end
 
