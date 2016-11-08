@@ -4,7 +4,7 @@
 
 <div id='home-team-container'>
   <ul>
-    <% @match.teams.first.each do |teammate| %>
+    <% @match["teams"].first.each do |teammate| %>
       <li><%= teammate["first_name"], teammate["last_name"] %></li>
     <% end %>
   </ul>
@@ -12,7 +12,7 @@
 
 <div id='away-team-container'>
   <ul>
-    <% @match.teams.last.each do |teammate| %>
+    <% @match["teams"].last.each do |teammate| %>
       <li><%= teammate["first_name"], teammate["last_name"] %></li>
     <% end %>
   </ul>
