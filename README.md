@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Application is a rails front end portion of the decoupled Go Team Final Project @ DBC
 
-Things you may want to cover:
+###Software Versions
+-ruby 2.3.1p112
+-rails 5
 
-* Ruby version
+###Deployment
+-Deployed on dbc-goteam.herokuapp.com
 
-* System dependencies
+###System Dependencies
+-Depends on api-goteam.herokuapp.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Deployment Instructions:
+-Regular Rails Application Deployment
