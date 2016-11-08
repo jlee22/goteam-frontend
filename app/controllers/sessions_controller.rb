@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
-
+  # helper_method :current_user
   def create
     @user = sign_in
+    current_user=(@user)
+    login(current_user)
     redirect_to "/users/#{@user['id']}"
   end
 
