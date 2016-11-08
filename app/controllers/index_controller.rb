@@ -1,6 +1,6 @@
 class IndexController < ApplicationController
   before_action :define_url
-  
+
   def index
     @session = '' #Session.new
     @sports = HTTParty.get(@url + "/sports.json")
@@ -10,8 +10,6 @@ class IndexController < ApplicationController
   def about
   end
 end
-
-
 
 private
 

@@ -1,1 +1,6 @@
 <h2>Match Show</h2>
+<p>Rendering the score partial for checking</p>
+<%= render 'team', locals:{ team: @team1 }%>
+  <%= render 'score' %>
+  <%= render 'map' %>
+<%= render 'team', locals:{ team: @team2 } %>

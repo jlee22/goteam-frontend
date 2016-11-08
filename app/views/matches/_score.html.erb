@@ -1,0 +1,17 @@
+<div class="score-container">
+  <%= form_tag matches_edit_path, class:"score-form", remote: true do %>
+    <div class="team-1-score">
+      <h2>Team 1</h2>
+      <%= label_tag :Team_1_score %>:
+      <%= text_field_tag :score_1 %>
+    </div>
+    <div class="team-2-score">
+      <h2>Team 2</h2>
+      <%= label_tag :Team_2_score %>:
+      <%= text_field_tag :score_2 %>
+    </div>
+    <div class="submit">
+      <%= submit_tag 'Send Scores' %>
+    </div>
+  <% end %>
+</div>
