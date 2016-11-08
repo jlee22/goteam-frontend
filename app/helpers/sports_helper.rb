@@ -1,17 +1,13 @@
 module SportsHelper
 
-  def self.list
+  URL = 'https://api-goteam.herokuapp.com/api'
 
+  def self.list
+    HTTParty.get(URL + "/sports.json")
   end
 
   def self.get(id)
-
-  end
-
-  private
-
-  def url
-    @url = "https://api-goteam.herokuapp.com/api"
+    HTTParty.get(URL + "/sports/#{id}.json")
   end
 
 end
