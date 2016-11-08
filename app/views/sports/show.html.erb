@@ -8,4 +8,11 @@
 <h3>Rules of the Game</h3>
 
 <!-- Stat PUT route. Change to active for particular sport -->
-
+<div class="find-match-container">
+<!-- DON'T FOREGT TO USE HELPER METHOD FOR USER ID -->
+<% if @stat["active"] == "false" %>
+  <%= link_to("Find a match", user_stat_path(1, @stat["id"], active: "true"), method: :put, id: "find-match-link") %>
+<% else %>
+  <%= link_to("Cancel Search", user_stat_path(1, @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
+<% end %>
+</div>

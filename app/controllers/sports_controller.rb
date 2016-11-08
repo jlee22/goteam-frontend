@@ -7,17 +7,9 @@ class SportsController < ApplicationController
   end
 
   def show
-    if @sports
-      @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
-      # CURRENT USER ID NEEDED
-      @stats = HTTParty.get(@url + "/users/1/stats.json")
-      p '*' * 30
-      p @stats["0"]
-      # CURRENT USER ID NEEDED
-      # @stat = @stats[0].find { |stat| stat["user_id"] == 1 && stat["sport_id"] == params["id"] }
-    else
-      "No sports found"
-    end
+    @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
+    # CURRENT USER ID NEEDED
+    @stat = HTTParty.post(@url + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": 1})
   end
 
   def get_type
