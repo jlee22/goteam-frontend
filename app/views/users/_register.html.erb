@@ -3,6 +3,8 @@
   <%= text_field_tag :first_name %><br>
   <%= label_tag :last_name %><br>
   <%= text_field_tag :last_name %><br>
+  <%= label_tag :email %><br>
+  <%= email_field_tag :email %><br>
 
   <h2>Address:</h2>
   <%= label_tag :street %><br>
@@ -18,8 +20,8 @@
 
   <h2>Password:</h2>
   <%= label_tag :password %><br>
-  <%= text_field_tag :password %><br>
+  <%= password_field_tag :password %><br>
   <%= label_tag :password_confirmation %><br>
-  <%= text_field_tag :password_confirmation %><br>
+  <%= password_field_tag :password_confirmation %><br>
   <%= submit_tag %>
 <% end %>
