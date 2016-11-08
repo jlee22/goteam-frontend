@@ -1,9 +1,14 @@
 <div id="login-page-container">
-  <div class="container-fluid">
-    <div class="login">
+
+  <% if current_user %>
+    <%= render 'users/matches_in_area' %>
+  <% else %>
+    <div class="container-fluid">
       <%= render 'sessions/login' %>
     </div>
+  <% end %>
 </div>
+
 <script>
   $( "#tabs" ).tabs({collapsible: true});
 </script>

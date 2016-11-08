@@ -1,16 +1,14 @@
-<% if current_user %>
-
-<% else %>
-  <div id="login-form">
-    <%= form_tag sessions_path do %>
-      <%= label_tag :email %>:<br>
-      <%= text_field_tag :email %><br>
-      <%= label_tag :password %>:<br>
-      <%= text_field_tag :password %><br>
-      <div id='login-register'>
-      <%= submit_tag "Login", class:'btn-default' %>
-      <% end %>
-      <%= link_to 'Register', new_user_path %>
-      </div>
+<div id="login-form">
+  <div class="login">
+  <%= form_tag sessions_path do %>
+    <%= label_tag :email %>:<br>
+    <%= text_field_tag :email %><br>
+    <%= label_tag :password %>:<br>
+    <%= text_field_tag :password %><br>
+    <div id='login-register'>
+    <%= submit_tag "Login", class:'btn-default' %>
+  <% end %>
+    <%= link_to 'Register', new_user_path %>
+    </div>
   </div>
-<% end %>
+</div>
