@@ -48,16 +48,10 @@ $(document).on("turbolinks:load", function() {
 
       request.done(function(response) {
         findMatchLinkTarget.addClass("hidden")
-        matchResults()
       })
 
       request.fail(function(response) {
         alert(response);
       })
     })
-
-  var matchResults = function() {
-
-  }
-  }
 

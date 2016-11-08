@@ -1,4 +1,5 @@
 class MatchesController < ApplicationController
+
   def show
     @location = HTTParty.get(api_url + 'matches/#{:id}')
     @team = ''
@@ -9,4 +10,5 @@ class MatchesController < ApplicationController
       :body =>  {"home_team": {"score": params["score_1"]},
                 "away_team": {"score": params["score_2"]}} )
   end
+
 end
