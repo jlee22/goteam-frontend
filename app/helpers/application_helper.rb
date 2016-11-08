@@ -4,4 +4,8 @@ module ApplicationHelper
     'https://api-goteam.herokuapp.com/api'
   end
 
+  def current_user
+
+  end
+
 end
