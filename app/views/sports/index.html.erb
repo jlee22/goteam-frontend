@@ -1,6 +1,5 @@
 <h2>Sports Index</h2>
 
-
 <% @uniq_sports.each do |sport| %>
   <div class="sport-container">
   <%= form_for(:sport, url: "/sports/type", html: {class: "submit-sport-form"}) do |f| %>
