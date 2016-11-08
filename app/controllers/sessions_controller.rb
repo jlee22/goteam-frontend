@@ -2,14 +2,16 @@ class SessionsController < ApplicationController
   # helper_method :current_user
   def create
     @user = sign_in
-    current_user=(@user)
-    login(current_user)
+    # current_user=(@user)
+    login(@user)
+    p '----' * 20
+    p current_user
     redirect_to "/users/#{session['id']}"
   end
 
   def destroy
     logout
-    redirect_to root
+    redirect_to '/'
   end
 
   private

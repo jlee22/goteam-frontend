@@ -1,7 +1,7 @@
 <div class="login-header">
-  <%= link_to 'Go Home', '/' %> |
-  <!-- Need current user logic -->
-  <%= link_to 'User Profile', '/users/1' %> |
-  <!-- hit the api's destroy path -->
-  <%= link_to 'Logout', session_path(current_user['id']), method: :delete%>
+  <% if logged_in %>
+    <%= link_to 'Go Home', '/' %> |
+    <%= link_to 'User Profile', user_path(current_user['id']) %> |
+    <%= link_to 'Logout', session_path(session['id']), method: :delete%>
+  <% end %>
 </div>
