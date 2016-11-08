@@ -1,0 +1,17 @@
+<div class="score-container">
+  <%= form_tag team_update_path, class:"register-form" do %>
+    <div class="team-1-score">
+      <h2>Team 1</h2>
+      <%= label_tag :Team_1_score %>:
+      <%= text_field_tag :team_1_score %>
+    </div>
+    <div class="team-2-score">
+      <h2>Team 2</h2>
+      <%= label_tag :Team_2_score %>:
+      <%= text_field_tag :team_2_score %>
+    </div>
+    <div class="submit">
+      <%= submit_tag %>
+    </div>
+  <% end %>
+</div>
