@@ -7,10 +7,17 @@ class SportsController < ApplicationController
   end
 
   def show
-    @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
+    if @sports
+      @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
+      @stats = HTTParty.get(@url + "/users/current_user/stats")
+
+      @stat = @stats.find { |stat| stat[] }
+    else
+      "No sports found"
+    end
   end
 
-  def get_type
+  def get_typ
     # Hit route from Sports Index view
     if request.xhr?
       # All matches for sport category
