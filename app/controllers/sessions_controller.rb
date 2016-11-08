@@ -2,14 +2,13 @@ class SessionsController < ApplicationController
 
   def create
     @user = sign_in
-    p @user
-    redirect "/users/#{@user}"
+    redirect_to "/users/#{@user['id']}"
   end
 
   private
 
   def sign_in
-    HTTParty.post('https://api-goteam.herokuapp.com/api/sessions', :body=>{"user"=>{"email"=>'rachael.stammy@vonrueden.info', "password"=>'password'}})
+    HTTParty.post(api_url + '/sessions.json', :body=>{"user"=>{"email"=>params['email'], "password"=>params['password']}})
   end
 
 end
