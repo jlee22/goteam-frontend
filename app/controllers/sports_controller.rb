@@ -6,10 +6,10 @@ class SportsController < ApplicationController
     @uniq_sports = @sports.uniq { |sport| sport["category"] }
   end
 
-  def create
-  end
-
   def show
+    @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
+    # CURRENT USER ID NEEDED
+    @stat = HTTParty.post(@url + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": 1})
   end
 
   def get_type
