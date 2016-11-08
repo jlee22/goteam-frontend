@@ -1,6 +1,5 @@
 <div id="user-show-container">
   <h2>User Show Page</h2>
-  <%= current_user %>
 
   <div class="user-info-container">
     <h4>User Info:</h4>
@@ -29,7 +28,6 @@
     <% if @stats %>
     <h4>User Stats:</h4>
       <% @stats.each do |k, sport| %>
-        <!-- <% if sport[0]['matches'] != 0 %> -->
           <%if sport[1]['category'] == "Tennis"%>
             Tennis <%= sport[1]['name'] %> Stats:<br>
             Number of Wins: <%= sport[0]['win'] %><br>
@@ -41,7 +39,6 @@
             Rating: <%= sport[0]['rating'] %><br>
             Division: <%= sport[0]['division'] %><br>
           <% end %>
-        <!-- <% end %> -->
       <% end %>
     <% end %>
   </div>
