@@ -4,7 +4,12 @@ class SessionsController < ApplicationController
     @user = sign_in
     current_user=(@user)
     login(current_user)
-    redirect_to "/users/#{@user['id']}"
+    redirect_to "/users/#{session['id']}"
+  end
+
+  def destroy
+    logout
+    redirect_to root
   end
 
   private

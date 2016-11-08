@@ -8,6 +8,10 @@ module UsersHelper
     @current_user = user
   end
 
+  def logged_in?
+    current_user
+  end
+
   def login(user)
     session[:id] = user['id']
   end
