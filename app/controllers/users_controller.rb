@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     user_id = params[:id]
-    @user = HTTParty.get(api_url + "/users/#{user_id}.json")
+    @user = UsersHelper.get(user_id)
     @stats = HTTParty.get(api_url + "/users/#{user_id}/stats.json")
     # @sports = HTTParty.get(@url + "/sports.json")
     # @sport_names = find_sport(@sports, @stats)

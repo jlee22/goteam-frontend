@@ -1,12 +1,14 @@
 module UsersHelper
 
-  def current_user
-    user = HTTParty.get("https://api-goteam.herokuapp.com/api/users/#{session[:id]}.json")
-    @current_user||= user if session[:id]
+  URL = 'https://api-goteam.herokuapp.com/api'
+
+  def self.get(id)
+    @user = HTTParty.get(URL + "/users/#{id}.json")
   end
 
-  def current_user=(user)
-    @current_user = user
+  def current_user
+    user = HTTParty.get(URL + "/#{session[:id]}.json")
+    @current_user||= user if session[:id]
   end
 
   def logged_in

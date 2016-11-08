@@ -1,11 +1,17 @@
 module SportsHelper
 
-  def list
-    # [sport, sport]
+  def self.list
+
   end
 
-  def get(id)
-    #{}
+  def self.get(id)
+
+  end
+
+  private
+
+  def url
+    @url = "https://api-goteam.herokuapp.com/api"
   end
 
 end
