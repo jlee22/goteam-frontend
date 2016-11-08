@@ -1,4 +1,3 @@
-
 class SessionsController < ApplicationController
 
   def create
