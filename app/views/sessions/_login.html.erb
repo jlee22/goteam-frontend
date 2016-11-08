@@ -1,31 +1,14 @@
-<% if current_user %>
-<div id="matches-in-area-container">
-  <h4> Current Matches In Your Area: </h4>
-  <div id="tabs" class='debug'>
-    <ul>
-      <% @sports.each_with_index do |sport,index| %>
-      <li><a href="#fragment-<%= index %>"><%= sport['category'] %></a></li>
-      <% end %>
-    </ul>
-
-    <% @sports.each_with_index do |sport,index| %>
-    <div id="fragment-<%= index %>">
-      <p><%= sport['category'] %> <%= sport['name'] %> </p>
+<div id="login-form">
+  <div class="login">
+  <%= form_tag sessions_path do %>
+    <%= label_tag :email %>:<br>
+    <%= text_field_tag :email %><br>
+    <%= label_tag :password %>:<br>
+    <%= text_field_tag :password %><br>
+    <div id='login-register'>
+    <%= submit_tag "Login", class:'btn-default' %>
+  <% end %>
+    <%= link_to 'Register', new_user_path %>
     </div>
-    <% end %>
   </div>
 </div>
-<% else %>
-  <div id="login-form">
-    <%= form_tag sessions_path do %>
-      <%= label_tag :email %>:<br>
-      <%= text_field_tag :email %><br>
-      <%= label_tag :password %>:<br>
-      <%= text_field_tag :password %><br>
-      <div id='login-register'>
-      <%= submit_tag "Login", class:'btn-default' %>
-      <% end %>
-      <%= link_to 'Register', new_user_path %>
-      </div>
-  </div>
-<% end %>

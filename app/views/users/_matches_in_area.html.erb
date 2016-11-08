@@ -1,0 +1,16 @@
+<div id="matches-in-area-container">
+  <h4> Current Matches In Your Area: </h4>
+  <div id="tabs" class='debug'>
+    <ul>
+      <% @sports.each_with_index do |sport,index| %>
+      <li><a href="#fragment-<%= index %>"><%= sport['category'] %></a></li>
+      <% end %>
+    </ul>
+
+    <% @sports.each_with_index do |sport,index| %>
+    <div id="fragment-<%= index %>">
+      <p><%= sport['category'] %> <%= sport['name'] %> </p>
+    </div>
+    <% end %>
+  </div>
+</div>
