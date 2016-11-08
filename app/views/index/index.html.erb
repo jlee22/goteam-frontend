@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-<h1 align="center">Go-Team!!!</h1>
 
-<h1> Current Matches In Your Area: </h1>
-
-<div class="container-fluid">
-  <div id="tabs">
-    <ul>
-      <% @sports.each_with_index do |sport,index| %>
-        <li><a href="#fragment-<%= index %>"><%= sport['name'] %></a></li>
-      <% end %>
-    </ul>
-
-    <% @sports.each_with_index do |sport,index| %>
-      <div id="fragment-<%= index %>">
-        <p><%= sport %></p>
-      </div>
-    <% end %>
-  </div>
-  <div class="index-login">
-    <%= render 'sessions/login' %>
-  </div>
-=======
 <div id="login-page-container">
   <div class="container-fluid">
     <div class="login">
       <%= render 'sessions/login' %>
     </div>
->>>>>>> aeea90887fe432305d53e57fdc36517db787ce7b
 </div>
 <script>
   $( "#tabs" ).tabs({collapsible: true});
