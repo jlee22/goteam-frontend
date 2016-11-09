@@ -8,7 +8,6 @@
 }
 
 #matches-in-area-container {
-
 }
 
 #matches-in-area-container h4{
@@ -17,5 +16,14 @@
 
 #tabs{
   max-width: 60%;
-  display: inline-block;
+
+  margin: 0px auto;
+
+}
+
+#index-map{
+  height: 80%;
+  margin: 10px;
+  padding: 0;
+  opacity: 1 !important;
 }

@@ -6,10 +6,6 @@ class UsersController < ApplicationController
     @matches = MatchesHelper.list(current_user['id'])
     @upcoming_matches = []
     @past_matches = []
-    p "----------" * 5
-    p @matches
-    p "----------" * 5
-    # I want
     @matches.each do |match|
       match.each do |k,v|
         if v['date'] > DateTime.now && @upcoming_matches.length < 3
