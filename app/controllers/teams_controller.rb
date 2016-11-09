@@ -6,7 +6,7 @@ class TeamsController < ApplicationController
     if @match["message"]
       render json: @match["message"]
     else
-      render "/matches/show", layout: false
+      render "/matches/_create", layout: false
     end
 
   end
