@@ -6,9 +6,6 @@ class UsersController < ApplicationController
     @matches = MatchesHelper.list(current_user['id'])
     @upcoming_matches = []
     @past_matches = []
-    p '---------------------------'
-    p @matches
-    p '---------------------------'
     @matches.each do |match|
       match.each do |k,v|
         if v['date'] > DateTime.now && @upcoming_matches.length < 3
@@ -18,13 +15,8 @@ class UsersController < ApplicationController
         end
       end
     end
-
-    p '---------------------------'
-    p @upcoming_matches
-    p '---------------------------'
-    p @past_matches
-    p '---------------------------'
   end
+
   def create
     @user = HTTParty.post(URL + '/users.json',
       :body=>{"user"=>
