@@ -49,11 +49,13 @@
       <h4> Upcoming Matches: </h4>
         <% @upcoming_matches.each do |match| %>
           <% match.each do |category,details| %>
-          <% p match %>
-            <%# sport_icon = SportsHelper.get_sport_icon(category) %>
-            <p><%= image_tag('sport_icons/soccer.svg', alt: 'soccer-ball')%> <%= category %><br>
-            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %></p>
+            <% sport_icon = SportsHelper.get_sport_icon(category) %>
+            <p><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+              <div class="details-container">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+                <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+              </div>
+            </p>
           <% end %>
         <% end %>
       <% end %>
