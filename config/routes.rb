@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'matches/edit', :to => 'matches#update'
     resources :users, only:[:create, :show, :new] do
       resources :teams, only: [:create,:update]
+      resources :matches, only: :show
       resources :stats, only:[:create,:update,:show]
     end
     resources :sessions, only:[:create, :destroy]

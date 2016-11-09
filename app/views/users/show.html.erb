@@ -51,10 +51,10 @@
       <% if @upcoming_matches.count > 0 %>
       <h4> Upcoming Matches: </h4>
         <% @upcoming_matches.each do |match| %>
-          <% match.each do |k,v| %>
-            <p><%= k %><br>
-            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= v['location'] %><br>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= v['date'] %></p>
+          <% match.each do |category,details| %>
+            <p><%= category %><br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %></p>
           <% end %>
         <% end %>
       <% end %>
@@ -62,10 +62,10 @@
       <% if @past_matches.count > 0 %>
       <h4> Past Matches: </h4>
         <% @past_matches.each do |match| %>
-          <% match.each do |k,v| %>
-            <p><%= k %><br>
-            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= v['location'] %><br>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= v['date'] %></p>
+          <% match.each do |category,details| %>
+            <p><%= category %><br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %></p>
           <% end %>
         <% end %>
       <% end %>
