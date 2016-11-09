@@ -3,16 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #user-show-page-container {
-  margin-left: 15px;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://static.pexels.com/photos/30732/pexels-photo-30732.jpg);
+  background-size:cover;
+  z-index: -1;
 }
-
+#user-show-page-container h2{
+  margin: 0;
+}
 #user-show-container {
   display: flex;
   justify-content: center;
-  width: 100%
+  width: 100%;
+  color: #dce1e9;
 }
-
-#user-info-container
 
 .profile {
   background-color: #ff5714;

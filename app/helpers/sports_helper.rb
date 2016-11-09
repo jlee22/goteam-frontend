@@ -6,8 +6,8 @@ module SportsHelper
     HTTParty.get(URL + "/sports.json")
   end
 
-  def self.get
-    HTTParty.get(URL + "/sports/1.json")
+  def self.get(id)
+    HTTParty.get(URL + "/sports/#{id}.json")
   end
 
 end

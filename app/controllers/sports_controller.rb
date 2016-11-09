@@ -7,14 +7,8 @@ class SportsController < ApplicationController
   end
 
   def show
-    p "-----" * 10
-    p params
-    p "-----" * 10
     @sport = SportsHelper.get(params["id"])
-    p @sport
-    p "-----" * 10
-    # CURRENT USER ID NEEDED
-
+    @stat = StatsHelper.get(params["id"], current_user['id'])
   end
 
   def get_type
