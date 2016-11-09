@@ -2,26 +2,30 @@
   <script>
       function initMap() {
         var san_francisco = {lat: 37.7845165, lng: -122.3971939};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
+        var map = new google.maps.Map(document.getElementById('index-map'), {
+          zoom: 12,
           center: san_francisco
         });
+      var locations = [{lat: <%= locations[:lat] %>, lng: <%= locations[:lng] %>}]
 
-      var locations = <%= locations %>
+
       var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      var markerCluster = new MarkerClusterer(map, markers,
-      { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
 
-        var markers = locations.map(function(location, i) {
+      var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
-          position: location,
-          label: labels[i % labels.length]
+            position: location,
+            label: labels[i % labels.length]
+          });
         });
 
-        });
+
+      var markerCluster = new MarkerClusterer(map, markers,
+      { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
 
       }
 </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3O9m3395CGi1Y-_rw6ws4sXqhgcxeL1Y&callback=initMap">
   </script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>

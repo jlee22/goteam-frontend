@@ -7,7 +7,7 @@ class IndexController < ApplicationController
     @matches
 
     @sports_matches = ''
-    @tennis_singles = {lat: '37.767221', lng: '-122.442799'}
+    @tennis_singles = {:lat => 37.767221, :lng => -122.442799}
 
 
     @tennis_doubles = [
