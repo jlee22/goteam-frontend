@@ -1,4 +1,4 @@
-<div id="map"></div>
+<div id="index-map"></div>
   <script>
       function initMap() {
         var san_francisco = {lat: 37.7845165, lng: -122.3971939};
@@ -6,16 +6,22 @@
           zoom: 15,
           center: san_francisco
         });
-        console.log(san_francisco);
-// Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        var marker = new google.maps.Marker({
-          position: san_francisco,
-          map: map
+      var locations = <%= locations %>
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var markerCluster = new MarkerClusterer(map, markers,
+      { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
+
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+          position: location,
+          label: labels[i % labels.length]
         });
+
+        });
+
       }
 </script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=#{ENV[BLAH]}&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3O9m3395CGi1Y-_rw6ws4sXqhgcxeL1Y&callback=initMap">
   </script>
