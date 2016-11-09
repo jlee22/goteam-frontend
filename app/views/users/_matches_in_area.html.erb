@@ -3,14 +3,19 @@
   <div id="tabs" class='debug'>
     <ul>
       <% @sports.each_with_index do |sport,index| %>
-      <li><a href="#fragment-<%= index %>"><%= sport['category'] %></a></li>
+      <li><a href="#fragment-<%= index %>"><%= sport['category'] %> <%= sport['name'] %></a></li>
       <% end %>
     </ul>
 
-    <% @sports.each_with_index do |sport,index| %>
-    <div id="fragment-<%= index %>">
-      <p><%= sport['category'] %> <%= sport['name'] %> </p>
-    </div>
+     <% @sports.each_with_index do |sport,index| %>
+      <div id="fragment-<%= index %>">
+        <% @matches.each do |match| %>
+         <%= sport['id'] %>*****<%= match['sport_id'] %>
+          <% if sport['id'] == match['sport_id']%>
+            <p><%= match['location'] %><%= match['date'] %></p>
+          <% end %>
+      </div>
+        <% end %>
     <% end %>
   </div>
 </div>
