@@ -48,4 +48,4 @@ $(document).on('turbolinks:load', function(){
   //       }); // end of ajax request
 
   // }); // end of button click logic
-}) // end of doc ready
+// }) // end of doc ready
