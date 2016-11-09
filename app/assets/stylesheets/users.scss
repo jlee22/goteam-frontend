@@ -2,8 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#user-show-page-container {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://static.pexels.com/photos/30732/pexels-photo-30732.jpg);
+  background-size:cover;
+  z-index: -1;
+}
+#user-show-page-container h2{
+  margin: 0;
+}
 #user-show-container {
-  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #dce1e9;
 }
 
 .profile {

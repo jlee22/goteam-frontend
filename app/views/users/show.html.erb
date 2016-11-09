@@ -1,73 +1,74 @@
-<div id="user-show-container">
+<div id="user-show-page-container">
   <h2>User Show Page</h2>
+    <div class="user-show-container">
+    <div class="user-info-container">
+      <h4>User Info:</h4>
 
-  <div class="user-info-container">
-    <h4>User Info:</h4>
+      <% if @user %>
+        <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <span class="profile">
+            <%= @user['first_name'] %> <%= @user['last_name'] %>
+          </span> </p>
+        <p> <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          <span class="profile">
+            <%= @user['email'] %>
+          </span> </p>
+        <p> <i class="fa fa-building" aria-hidden="true"></i>
+          <span class="profile">
+            <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
+          </span> </p>
+        <p> <i class="fa fa-phone-square" aria-hidden="true"></i>
+          <span class="profile">
+            <%= @user['phone'] %>
+          </span> </p>
+      <% end %>
+    </div>
 
-    <% if @user %>
-      <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
-        <span class="profile">
-          <%= @user['first_name'] %> <%= @user['last_name'] %>
-        </span> </p>
-      <p> <i class="fa fa-envelope-square" aria-hidden="true"></i>
-        <span class="profile">
-          <%= @user['email'] %>
-        </span> </p>
-      <p> <i class="fa fa-building" aria-hidden="true"></i>
-        <span class="profile">
-          <%= @user['street'] %>, <%= @user['city'] %>, <%= @user['state'] %> <%= @user['zip'] %>
-        </span> </p>
-      <p> <i class="fa fa-phone-square" aria-hidden="true"></i>
-        <span class="profile">
-          <%= @user['phone'] %>
-        </span> </p>
-    <% end %>
-  </div>
+    <div class="stats-container">
+      <% if @stats %>
+      <h4>User Stats:</h4>
+        <% @stats.each do |k, sport| %>
+            <%if sport[1]['category'] == "Tennis"%>
+              Tennis <%= sport[1]['name'] %> Stats:<br>
+              Number of Wins: <%= sport[0]['win'] %><br>
+              Rating: <%= sport[0]['rating'] %><br>
+              Division: <%= sport[0]['division'] %><br>
+            <% elsif sport[1]['category'] == "Soccer"%>
+              Soccer <%= sport[1]['name'] %> Stats:<br>
+              Number of Wins: <%= sport[0]['win'] %><br>
+              Rating: <%= sport[0]['rating'] %><br>
+              Division: <%= sport[0]['division'] %><br>
+            <% end %>
+        <% end %>
+      <% end %>
+    </div>
 
-  <div class="stats-container">
-    <% if @stats %>
-    <h4>User Stats:</h4>
-      <% @stats.each do |k, sport| %>
-          <%if sport[1]['category'] == "Tennis"%>
-            Tennis <%= sport[1]['name'] %> Stats:<br>
-            Number of Wins: <%= sport[0]['win'] %><br>
-            Rating: <%= sport[0]['rating'] %><br>
-            Division: <%= sport[0]['division'] %><br>
-          <% elsif sport[1]['category'] == "Soccer"%>
-            Soccer <%= sport[1]['name'] %> Stats:<br>
-            Number of Wins: <%= sport[0]['win'] %><br>
-            Rating: <%= sport[0]['rating'] %><br>
-            Division: <%= sport[0]['division'] %><br>
+    <h4><%= link_to 'Play Sports!!', sports_path %></h4>
+
+    <div class="matches-container">
+      <% if @upcoming_matches.count > 0 %>
+      <h4> Upcoming Matches: </h4>
+        <% @upcoming_matches.each do |match| %>
+          <% match.each do |k,v| %>
+            <p><%= k %><br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= v['location'] %><br>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= v['date'] %></p>
           <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <h4><%= link_to 'Play Sports!!', sports_path %></h4>
-
-  <div class="matches-container">
-    <% if @upcoming_matches.count > 0 %>
-    <h4> Upcoming Matches: </h4>
-      <% @upcoming_matches.each do |match| %>
-        <% match.each do |k,v| %>
-          <%= k %><br>
-          <%= v['location'] %> @
-          <%= v['date'] %><br>
         <% end %>
       <% end %>
-    <% end %>
 
-    <% if @past_matches.count > 0 %>
-    <h4> Past Matches: </h4>
-      <% @past_matches.each do |match| %>
-        <% match.each do |k,v| %>
-          <%= k %><br>
-          <%= v['location'] %> @
-          <%= v['date'] %><br>
+      <% if @past_matches.count > 0 %>
+      <h4> Past Matches: </h4>
+        <% @past_matches.each do |match| %>
+          <% match.each do |k,v| %>
+            <p><%= k %><br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= v['location'] %><br>
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= v['date'] %></p>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
-    <br>
-    <%= link_to 'All Past Matches', '#' %>
+      <br>
+      <%= link_to 'All Past Matches', '#' %>
+    </div>
   </div>
 </div>
