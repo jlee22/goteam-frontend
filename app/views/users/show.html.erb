@@ -27,6 +27,7 @@
       <% if @stats %>
       <h4>User Stats:</h4>
         <% @stats.each do |k, sport| %>
+        <div class='card card-block'>
             <p><%if sport[1]['category'] == "Tennis"%>
               Tennis <%= sport[1]['name'] %> Stats:<br>
               Rating: <%= sport[0]['rating'] %><br>
@@ -40,6 +41,7 @@
               Rating: <%= sport[0]['rating'] %><br>
               Division: <%= sport[0]['division'] %></p>
           <% end %>
+        </div>
         <% end %>
       <% end %>
     </div>
@@ -50,8 +52,8 @@
         <% @upcoming_matches.each do |match| %>
           <% match.each do |category,details| %>
             <% sport_icon = SportsHelper.get_sport_icon(category) %>
-            <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
-              <div class="details-container">
+            <div class='match-details-container card card-block'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+              <div class="details-container card-text">
                 <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
                 <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
               </div>
@@ -65,7 +67,7 @@
         <% @past_matches.each do |match| %>
           <% match.each do |category,details| %>
             <% sport_icon = SportsHelper.get_sport_icon(category) %>
-            <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+            <div class='match-details-container card card-block'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
               <div class="details-container">
                 <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
                 <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
