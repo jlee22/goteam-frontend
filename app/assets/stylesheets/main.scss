@@ -14,7 +14,7 @@ body {
 
 .fa {
   margin-right: 2px;
-  color: #2e7689;
+  color: #ff5714;
 }
 
 #login-form {
@@ -36,7 +36,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 50%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
   background-size:cover;
   z-index: -1;
 }
@@ -51,16 +51,25 @@ body {
 }
 
 .btn-default {
-  margin-top: 6px;
+  margin-top: 3px;
   opacity: 0.9;
   background-color: #dce1e9;
   color: black;
   border-radius: 5px;
+  margin-right: 3px;
 }
 
 .btn-default:hover {
-  background-color: #0f4c5c;
+  background-color: #ff5714;
   color: white;
+}
+
+.card {
+  background-color: #0f4c5c !important; //dark blue teal
+  border-radius: 15px !important;
+  border: 2px solid #ff5714 !important; //orange;
+  opacity: .85 !important;
+  max-width: 350px !important;
 }
 
 .debug {
