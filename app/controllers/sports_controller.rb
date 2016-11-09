@@ -7,9 +7,18 @@ class SportsController < ApplicationController
   end
 
   def show
+
     @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
     # CURRENT USER ID NEEDED
-    @stat = HTTParty.post(URL + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": current_user["id"]})
+    p @stat = HTTParty.post(URL + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": current_user["id"]})
+    # Check if stat exists
+    if @stat.parsed_response["message"]
+      p "CREATE STAT!!!!"
+      p @stat = StatsHelper.create(current_user["id"], params["id"])
+    end
+
+    @sport = SportsHelper.get(params["id"])
+    @stat = StatsHelper.get(params["id"], current_user['id'])
   end
 
   def get_type
