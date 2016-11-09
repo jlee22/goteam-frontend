@@ -1,12 +1,13 @@
 <div id="map"></div>
   <script>
+      var locations = <%= @tennis_singles %>
       function initMap() {
         var san_francisco = {lat: 37.7845165, lng: -122.3971939};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: san_francisco
         });
-        console.log(san_francisco)
+
         var marker = new google.maps.Marker({
           position: san_francisco,
           map: map
@@ -14,5 +15,5 @@
       }
 </script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAARI38daiR2oJesS9aYHjXyW2n9glKmJo&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=#{ENV[BLAH]}&callback=initMap">
   </script>
