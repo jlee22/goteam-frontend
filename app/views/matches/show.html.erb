@@ -2,8 +2,8 @@
 
 <p>Rendering the score partial for checking</p>
 <%= render partial: 'team', locals: { team: @home_team} %>
-  <%= render 'score' %>
-<!--   <%= render 'map' %> -->
 <%= render partial: 'team', locals: { team: @away_team} %>
+<%= render 'score' %>
+<%= render 'map' %>
 
 

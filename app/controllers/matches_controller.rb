@@ -4,8 +4,8 @@ class MatchesController < ApplicationController
     # @location = HTTParty.get(URL + 'matches/')
     @match = HTTParty.get(URL + '/users/1/matches/1.json')
     p "*" * 50
-   p @match["match"]
-   p "*" * 50
+    p @match["match"]
+    p "*" * 50
 
     @home_team = @match['Home_team']
     @away_team = @match['Away_team']
