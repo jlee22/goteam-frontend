@@ -26,4 +26,14 @@ class UsersController < ApplicationController
     p @past_matches
     p '---------------------------'
   end
+  def create
+    @user = HTTParty.post(URL + '/users.json',
+      :body=>{"user"=>
+      {"first_name"=>params['first_name'], "last_name"=>params['last_name'],"email"=>params['email'], "city"=>params['city'], "street"=>params['street'], "state"=>params['state'], "zip"=>params['zip'], "phone"=>params['phone'],"email"=>params['email'], "password"=>params['password']}})
+    if @user['id'] != nil
+      redirect_to root_path
+    else
+      render 'new'
+    end
+  end
 end
