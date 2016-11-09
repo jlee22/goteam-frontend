@@ -3,6 +3,9 @@ class SessionsController < ApplicationController
   def create
     @user = sign_in
     login(@user)
+    p "----------" * 5
+    p @user
+    p "----------" * 5
     redirect_to "/users/#{session['id']}"
   end
 
