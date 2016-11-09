@@ -54,4 +54,4 @@ $(document).on("turbolinks:load", function() {
         alert(response);
       })
     })
-
+}
