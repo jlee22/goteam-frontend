@@ -6,6 +6,10 @@ module UsersHelper
     HTTParty.get(URL + "/users/#{id}.json")
   end
 
+  def self.post(body_hash)
+    HTTParty.post(URL + '/users.json', :body=>body_hash)
+  end
+  
   def current_user
     user = HTTParty.get(URL + "/users/#{session[:id]}.json")
     @current_user||= user if session[:id]
