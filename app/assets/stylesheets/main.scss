@@ -65,7 +65,11 @@ body {
 }
 
 .card {
-
+  background-color: #0f4c5c !important; //dark blue teal
+  border-radius: 15px !important;
+  border: 2px solid #ff5714 !important; //orange;
+  opacity: .85 !important;
+  max-width: 350px !important;
 }
 
 .debug {
