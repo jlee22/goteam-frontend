@@ -1,18 +1,21 @@
 <h2>Match Partial</h2>
 
-<h3>This match is at <%= @match["location"] %> at <%= @match["date"] %></h3>
+<h3>Location: <%= @match["match"]["location"] %></h3>
+<h3>Date: <%= @match["match"]["date"] %></h3>
 
 <div id='home-team-container'>
+  <h3>Home Team</h3>
   <ul>
-    <% @match["teams"]["home_team"].each do |teammate| %>
+    <% @match["Home_team"].each do |teammate| %>
       <li><%= '#{teammate["first_name"]} ' +  '#{teammate["last_name"]}' %></li>
     <% end %>
   </ul>
 </div>
 
 <div id='away-team-container'>
+  <h3>Away Team</h3>
   <ul>
-    <% @match["teams"]["away_team"].each do |teammate| %>
+    <% @match["Away_team"].each do |teammate| %>
       <li><%= '#{teammate["first_name"]} ' +  '#{teammate["last_name"]}' %></li>
     <% end %>
   </ul>
