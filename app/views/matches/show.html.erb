@@ -1,7 +1,9 @@
 <h2>Match Show</h2>
 
 <p>Rendering the score partial for checking</p>
-<%= render 'team', locals:{ team: @team1 }%>
+<%= render partial: 'team', locals: { team: @home_team} %>
   <%= render 'score' %>
-  <%= render 'map' %>
-<%= render 'team', locals:{ team: @team2 } %>
+<!--   <%= render 'map' %> -->
+<%= render partial: 'team', locals: { team: @away_team} %>
+
+

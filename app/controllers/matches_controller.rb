@@ -1,8 +1,15 @@
 class MatchesController < ApplicationController
 
   def show
-    @location = HTTParty.get(URL + 'matches/#{:id}')
-    @team = ''
+    # @location = HTTParty.get(URL + 'matches/')
+    @match = HTTParty.get(URL + '/users/1/matches/1.json')
+    p "*" * 50
+   p @match["match"]
+   p "*" * 50
+
+    @home_team = @match['Home_team']
+    @away_team = @match['Away_team']
+
   end
 
   def update
