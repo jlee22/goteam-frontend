@@ -46,8 +46,28 @@
   <h4><%= link_to 'Play Sports!!', sports_path %></h4>
 
   <div class="matches-container">
-    <h4>Upcoming Matches:</h4>
-    <h4>Recent Matches:</h4>
+    <% if @upcoming_matches.count > 0 %>
+    <h4> Upcoming Matches: </h4>
+      <% @upcoming_matches.each do |match| %>
+        <% match.each do |k,v| %>
+          <%= k %><br>
+          <%= v['location'] %> @
+          <%= v['date'] %><br>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% if @past_matches.count > 0 %>
+    <h4> Past Matches: </h4>
+      <% @past_matches.each do |match| %>
+        <% match.each do |k,v| %>
+          <%= k %><br>
+          <%= v['location'] %> @
+          <%= v['date'] %><br>
+        <% end %>
+      <% end %>
+    <% end %>
+    <br>
     <%= link_to 'All Past Matches', '#' %>
   </div>
 </div>
