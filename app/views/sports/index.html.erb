@@ -2,7 +2,7 @@
 
 <div id="sports-index-container">
 
-  <div id="sports-buttons-container"
+  <div id="sports-buttons-container">
   <% @uniq_sports.each do |sport| %>
     <%= form_for(:sport, url: "/sports/type", html: {class: "submit-sport-form"}) do |f| %>
       <%= f.hidden_field :category, value: sport["category"] %>
