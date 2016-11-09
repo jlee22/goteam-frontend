@@ -7,15 +7,10 @@
       <% end %>
     </ul>
 
-     <% @sports.each_with_index do |sport,index| %>
+    <% @sports.each_with_index do |sport,index| %>
       <div id="fragment-<%= index %>">
-        <% @matches.each do |match| %>
-         <%= sport['id'] %>*****<%= match['sport_id'] %>
-          <% if sport['id'] == match['sport_id']%>
-            <p><%= match['location'] %><%= match['date'] %></p>
-          <% end %>
+        <%= sport['name'] %><%= sport['category'] %>
       </div>
-        <% end %>
     <% end %>
   </div>
 </div>
