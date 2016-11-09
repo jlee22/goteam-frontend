@@ -51,7 +51,7 @@
           <% match.each do |category,details| %>
           <% p match %>
             <%# sport_icon = SportsHelper.get_sport_icon(category) %>
-            <p><%= image_tag('sport_icons/soccer-ball.png', alt: 'soccer-ball')%>  <%= category %><br>
+            <p><%= image_tag('sport_icons/soccer.svg', alt: 'soccer-ball')%> <%= category %><br>
             <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
             <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %></p>
           <% end %>
