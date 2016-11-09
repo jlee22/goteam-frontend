@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   private
 
   def sign_in
-    HTTParty.post(URL + '/sessions.json', :body=>{"user"=>{"email"=>params['email'], "password"=>params['password']}})
+    HTTParty.post(URL + '/sessions.json', :body=>{"email"=>params['email'], "password"=>params['password']})
   end
 
 end
