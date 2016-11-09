@@ -2,9 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#user-show-container {
+#user-show-page-container {
   margin-left: 15px;
 }
+
+#user-show-container {
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+#user-info-container
 
 .profile {
   background-color: #ff5714;
