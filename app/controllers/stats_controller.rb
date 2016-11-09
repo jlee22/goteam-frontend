@@ -2,10 +2,12 @@ class StatsController < ApplicationController
 
   def update
     p "HIT UPDATE ROUTE!"
-    p "$"*20
-    p URL + "/users/#{params["user_id"]}/stats/#{params["id"]}"
     # STAT UPDATE NOT WORKING YET
-    p HTTParty.put(URL + "/users/#{params["user_id"]}/stats/#{params["id"]}", body: {"active" => params["active"]}} )
+    response = HTTParty.put(URL + "/users/#{params["user_id"]}/stats/#{params["id"]}.json", body:{"active" => params["active"]})
+    p '-----------------------'
+    p response
+    p response['active']
+    p '-----------------------'
   end
 
 end
