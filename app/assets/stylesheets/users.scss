@@ -17,6 +17,7 @@
   justify-content: center;
   width: 100%;
   margin-left: 15px;
+  font-size: 1.5em;
 }
 
 .user-info-container {
@@ -27,6 +28,21 @@
 }
 .matches-container {
   width: 32%;
+}
+
+.matches-container img {
+  width: .9em;
+  height: .9em;
+
+  margin-right: 3px;
+}
+
+.match-details-container {
+  margin-bottom: 3%;
+}
+
+.details-container {
+  margin-left: 1%;
 }
 
 .profile {
