@@ -11,14 +11,13 @@ class UsersController < ApplicationController
     p '---------------------------'
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'] > DateTime.now
+        if v['date'] > DateTime.now && @upcoming_matches.length < 3
           @upcoming_matches << match
-        else
+        elsif v['date'] > DateTime.now && @past_matches.length < 3
           @past_matches << match
         end
       end
     end
-
 
     p '---------------------------'
     p @upcoming_matches
