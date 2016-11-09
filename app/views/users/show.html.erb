@@ -2,7 +2,6 @@
   <h2>User Show Page</h2>
     <div class="user-show-container">
     <div class="user-info-container">
-      <h4>User Info:</h4>
 
       <% if @user %>
         <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -28,22 +27,25 @@
       <% if @stats %>
       <h4>User Stats:</h4>
         <% @stats.each do |k, sport| %>
-            <%if sport[1]['category'] == "Tennis"%>
+            <p><%if sport[1]['category'] == "Tennis"%>
               Tennis <%= sport[1]['name'] %> Stats:<br>
               Number of Wins: <%= sport[0]['win'] %><br>
               Rating: <%= sport[0]['rating'] %><br>
-              Division: <%= sport[0]['division'] %><br>
-            <% elsif sport[1]['category'] == "Soccer"%>
+              Division: <%= sport[0]['division'] %></p>
+            <p><% elsif sport[1]['category'] == "Soccer"%>
               Soccer <%= sport[1]['name'] %> Stats:<br>
               Number of Wins: <%= sport[0]['win'] %><br>
               Rating: <%= sport[0]['rating'] %><br>
-              Division: <%= sport[0]['division'] %><br>
-            <% end %>
+              Division: <%= sport[0]['division'] %></p>
+            <p><% elsif sport[1]['category'] == "Badminton"%>
+              Badminton <%= sport[1]['name'] %> Stats:<br>
+              Number of Wins: <%= sport[0]['win'] %><br>
+              Rating: <%= sport[0]['rating'] %><br>
+              Division: <%= sport[0]['division'] %></p>
+          <% end %>
         <% end %>
       <% end %>
     </div>
-
-    <h4><%= link_to 'Play Sports!!', sports_path %></h4>
 
     <div class="matches-container">
       <% if @upcoming_matches.count > 0 %>
@@ -71,4 +73,5 @@
       <%= link_to 'All Past Matches', '#' %>
     </div>
   </div>
+  <h4><%= link_to 'Play Sports!!', sports_path %></h4>
 </div>
