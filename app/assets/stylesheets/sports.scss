@@ -16,6 +16,7 @@
 }
 
 #sports-index-container {
+  margin-top: -71px;
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://static.pexels.com/photos/163444/sport-treadmill-tor-route-163444.jpeg);
   background-size:cover;
@@ -23,9 +24,23 @@
   color: #dce1e9;
 }
 
-#sports-index-container h3 {
-margin: 0;
+h3 {
+text-align: center;
 padding: 5px;
+}
+
+#sports-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 450px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.submit-sport-form {
+  min-width: 200px;
+  min-height: 200px;
 }
 
 .sport-button {
@@ -36,11 +51,11 @@ padding: 5px;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 5px;
-  min-width: 100px;
-  min-height: 100px;
-  float: left;
   margin-right: 1%;
+  margin-top: 65px;
   position: relative;
+  min-width: 200px;
+  min-height: 200px;
 }
 
 .sport-button:hover {background-color: #ff5714}
