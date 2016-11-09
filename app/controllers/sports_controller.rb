@@ -9,7 +9,7 @@ class SportsController < ApplicationController
   def show
     @sport = @sports.find { |sport| sport["id"] == params["id"].to_i }
     # CURRENT USER ID NEEDED
-    @stat = HTTParty.post(api_url + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": current_user["id"]})
+    @stat = HTTParty.post(URL + "/sports/#{params["id"]}/stats/find.json", body: {"user_id": current_user["id"]})
   end
 
   def get_type
@@ -24,6 +24,6 @@ class SportsController < ApplicationController
   private
 
   def set_sports
-    @sports = HTTParty.get(api_url + "/sports.json")
+    @sports = SportsHelper.list
   end
 end
