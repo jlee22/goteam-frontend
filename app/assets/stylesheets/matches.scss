@@ -40,9 +40,13 @@
   z-index: -1;
   color: #dce1e9;
   align-items: center;
+  h2 {
+    padding-top: 2%;
+  }
 }
 
 .match-show-container {
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   font-size: 1.5em;
