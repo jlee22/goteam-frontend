@@ -19,6 +19,8 @@ class MatchesController < ApplicationController
   def show
     # @location = HTTParty.get(URL + 'matches/')
     @match = MatchesHelper.get(session, params['id'])
+    p @match
+    
     @sport = SportsHelper.get(@match["match"]["sport_id"])
     @home_team = @match['Home_team']
     @away_team = @match['Away_team']

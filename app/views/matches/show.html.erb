@@ -16,7 +16,9 @@
         </div>
     </div>
       <% if DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M") < DateTime.now%>
-        <% if @match["Home"]["updated?"] &&  @match["Away"]["updated?"] %>
+        <%=  @match["Home"]["updated?"] %>
+        <%=  @match["Away"]["updated?"] %>
+        <% if @match["Home"]["updated?"] == "true" &&  @match["Away"]["updated?"] == "true" %>
         <div class="">
             Home :
             <%= @match["Home"]["score"]  %>
