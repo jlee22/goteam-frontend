@@ -56,8 +56,8 @@
   align-items: baseline;
 }
 
-#match-show-page-container h2{
-
+#match-show-container > h2{
+  align-text: center;
 }
 .match-show-container {
   display: flex;
@@ -65,6 +65,7 @@
   width: 100%;
   margin-left: 15px;
   font-size: 1.5em;
+  background-color: blue;
 }
 
 .home-team-container {
