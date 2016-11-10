@@ -48,7 +48,7 @@
 }
 
 #match-show-page-container h2{
-  margin: 0;
+  margin: 20px;
 }
 .match-show-container {
   display: flex;
@@ -59,19 +59,24 @@
 }
 
 .home-team-container {
+  max-height: 60%;
   width: 32%;
+  margin: 10px;
+  padding: 50px;
+
 }
 .score-container {
+  padding: 10px;
   width: 32%;
 }
 .away-team-container {
+  padding: 10px;
   width: 32%;
 }
 
 .matches-container img {
   width: .9em;
   height: .9em;
-
   margin-right: 3px;
 }
 
@@ -82,7 +87,10 @@
 .details-container {
   margin-left: 1%;
 }
+#score_1{
+  width: 100px;
 
+}
 .profile {
   background-color: #ff5714;
   color: #fff;
