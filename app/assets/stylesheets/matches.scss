@@ -86,17 +86,20 @@
   -moz-column-count: 3; /* Firefox */
   column-count: 3;
   font-size: 1.5em;
+  .match-details-container {
+    margin-bottom: 0;
+  }
+}
 
+h4 {
+  text-align: left;
+  margin-left: 2%;
 }
 
 #all-matches-container img {
   width: .9em;
   height: .9em;
   margin-right: 3px;
-}
-
-.match-details-container {
-  margin-bottom: 3%;
 }
 
 .details-container {
