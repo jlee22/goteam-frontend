@@ -1,11 +1,16 @@
-<h2>Sports Show</h2>
 
 <div class="sport-title">
-  <h2><%= @sport["category"] %></h2>
-  <h2><%= @sport["name"] %></h2>
+  <h2><%= "#{@sport["category"]} #{@sport["name"]}" %></h2>
 </div>
 
-<h3>Rules of the Game</h3>
+<div id='sport-description-container'>
+  <h3>Description</h3>
+  <%= @sport["description"] %>
+</div>
+
+<div class='sport-video-container'>
+
+</div>
 
 <!-- Stat PUT route. Change to active for particular sport -->
 <div class="find-match-container">

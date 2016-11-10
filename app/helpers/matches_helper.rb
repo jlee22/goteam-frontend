@@ -1,7 +1,7 @@
 module MatchesHelper
 
-  # URL = 'https://api-goteam.herokuapp.com/api'
-  URL = "http://localhost:3001/api"
+  URL = 'https://api-goteam.herokuapp.com/api'
+  # URL = "http://localhost:3001/api"
 
   def self.list(current_user_id)
     @matches = HTTParty.get(URL + "/users/#{current_user_id}/matches.json")

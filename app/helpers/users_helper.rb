@@ -1,7 +1,7 @@
 module UsersHelper
 
-  # URL = 'https://api-goteam.herokuapp.com/api'
-  URL = "http://localhost:3001/api"
+  URL = 'https://api-goteam.herokuapp.com/api'
+  # URL = "http://localhost:3001/api"
 
   def self.get(id)
     HTTParty.get(URL + "/users/#{id}.json")
