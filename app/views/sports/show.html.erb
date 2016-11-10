@@ -15,9 +15,9 @@
     <!-- Stat PUT route. Change to active for particular sport -->
     <div class="find-match-container">
       <% if @stat["active"] == "false" %>
-        <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true"), method: :put, id: "find-match-link") %>
+        <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true"), method: :put, id: "find-match-link", class: "btn btn-primary") %>
       <% else %>
-        <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
+        <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link", class: "btn btn-primary") %>
       <% end %>
     </div>
   </div>
