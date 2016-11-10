@@ -8,7 +8,7 @@
   <%= label_tag :phone %>:
   <%= text_field_tag :phone %><br>
 
-  <p>Address</p>
+  <div class='register-div'>
   <%= label_tag :street %>:
   <%= text_field_tag :street %><br>
   <%= label_tag :city %>:
@@ -16,13 +16,14 @@
   <%= label_tag :state %>:
   <%= text_field_tag :state %><br>
   <%= label_tag :zip %>:
-  <%= text_field_tag :zip %><br>
+  <%= text_field_tag :zip %></div>
 
-  <p>Password</p>
+  <div class='register-div'>
   <%= label_tag :password %>:
   <%= password_field_tag :password %><br>
   <%= label_tag :password_confirmation %>:
-  <%= password_field_tag :password_confirmation %><br>
+  <%= password_field_tag :password_confirmation %></div>
+  <div class='register-div'>
   <%= submit_tag('Sign-Up!', :class => 'btn-default') %>
-  <%= link_to 'Login Page', root_path %>
+  <%= link_to 'Login Page', root_path %></div>
 <% end %>
