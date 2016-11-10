@@ -11,8 +11,11 @@ module StatsHelper
     HTTParty.post(URL + "/users/#{current_user_id}/stats.json", body: {"sport_id": sport_id})
   end
 
-  def self.get(id, current_user_id)
-    HTTParty.post(URL + "/sports/#{id}/stats/find.json", body: {:user_id => "#{current_user_id}"})
+  def self.post(id, session)
+    HTTParty.post(URL + "/sports/#{id}/stats/find.json?token=" + session[:token].to_s, body: {:user_id => session["id"]})
   end
 
+  def self.update(user_id,stat_id, session,active)
+    HTTParty.put(URL + "/users/#{user_id}/stats/#{stat_id}.json?token=" + session[:token].to_s, body: {:user_id => session["id"], active: active}).parsed_response
+  end
 end
