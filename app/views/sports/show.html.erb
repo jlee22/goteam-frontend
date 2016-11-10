@@ -20,7 +20,3 @@
     <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
   <% end %>
 </div>
-
-<div class="create-team-container">
-  <%= link_to("Create team", user_teams_path(current_user["id"], sport_id: @sport["id"]), method: :post) %>
-</div>
