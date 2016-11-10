@@ -25,9 +25,11 @@ $(document).on("turbolinks:load", function() {
           for(var i=0; i < response.length; i++) {
             var sportLink = "/sports/" + response[i].id;
             var sportId = response[i].name;
-            var fullSportLink = '<span class="sport-link-span"><a href="' + sportLink + '">'+sportId+'</a></span>'
-            submitSportTarget.hide();
-            submitSportTarget.parent().append(fullSportLink);
+            var formSportLink = '<form action="' + sportLink + '"><input class="sport-button" type="submit" value= '+ sportId +' /></form>'
+            // var fullSportLink = '<button class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
+            submitSportTarget.parent().hide();
+            $("#sports-type-container").append(formSportLink)
+
           }
         })
       })
