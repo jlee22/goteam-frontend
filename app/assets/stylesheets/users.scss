@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #user-show-page-container {
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 20%,rgba(0,0,0,0.6) 60%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
   background-size:cover;
   z-index: -1;
   color: white;
+  padding: 30px;
+  padding-bottom: 60px;
 }
 #user-show-page-container h2{
   margin: 0;
