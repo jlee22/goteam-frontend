@@ -9,7 +9,7 @@ class MatchesController < ApplicationController
       match.each do |k,v|
         if v['date'] > DateTime.now.strftime("%d/%m/%Y %H:%M")
           @upcoming_matches << match
-        elsif v['date'] < DateTime.now .strftime("%d/%m/%Y %H:%M")
+        elsif v['date'] < DateTime.now.strftime("%d/%m/%Y %H:%M")
           @past_matches << match
         end
       end
@@ -25,7 +25,7 @@ class MatchesController < ApplicationController
 
   def update
     @match = MatchesHelper.put(params['match_id'], session,params["score_1"],params["score_2"])
-    redirect_to user_path
+    redirect_to user_match_path(session[:id],params["match_id"])
   end
 
 end
