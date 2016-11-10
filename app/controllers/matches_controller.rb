@@ -7,9 +7,9 @@ class MatchesController < ApplicationController
     @past_matches = []
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'] > DateTime.now
+        if v['date'] > DateTime.now.strftime("%d/%m/%Y %H:%M")
           @upcoming_matches << match
-        elsif v['date'] < DateTime.now 
+        elsif v['date'] < DateTime.now .strftime("%d/%m/%Y %H:%M")
           @past_matches << match
         end
       end

@@ -21,12 +21,48 @@
 }
 
 .user-info-container {
+  margin-top:2%;
   width: 32%;
 }
+
+.user-info-container a {
+  color: white;
+}
+
+.user-info-container a:hover {
+  color: white;
+}
+
+.user-info-container .btn {
+  border: 1px solid white;
+}
+
+.user-info-container .btn:hover {
+  border: 1px solid white;
+}
+
+.matches-container a {
+  color: white;
+}
+
+.matches-container a:hover {
+  color: white;
+}
+
+.matches-container .btn {
+  border: 1px solid white;
+}
+
+.matches-container .btn:hover {
+  border: 1px solid white;
+}
+
 .stats-container {
+  margin-top:2%;
   width: 32%;
 }
 .matches-container {
+  margin-top:2%;
   width: 32%;
 }
 
