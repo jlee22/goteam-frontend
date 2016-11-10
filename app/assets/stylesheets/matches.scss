@@ -49,8 +49,9 @@
   margin-top: 3%;
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
-  // background-color: blue;
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
 .home-team-container {
@@ -78,18 +79,16 @@
 }
 
 .team{
-  background-color: 'blue';
-  padding-right: 15px;
+  // padding-right: 15px;
 }
 
 .team-container {
-  text-align: center;
   margin-left: 6%;
   margin-right: 6%;
 }
 
-#vs-container h3 {
-  font-size: 1.5em;
+#vs-container {
+  vertical-align: middle;
 }
 
 #all-matches-container {
