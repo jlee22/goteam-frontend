@@ -44,9 +44,9 @@
 
 .match-show-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 1.5em;
-  background-color: blue;
+  // background-color: blue;
 }
 
 .home-team-container {
@@ -75,13 +75,16 @@
 
 .team{
   background-color: 'blue';
+  padding-right: 15px;
 }
 
 .team-container {
   text-align: center;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
-#vs-container > h3 {
+#vs-container h3 {
   font-size: 1.5em;
 }
 
