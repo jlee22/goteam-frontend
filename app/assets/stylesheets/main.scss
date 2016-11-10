@@ -17,6 +17,15 @@ body {
   color: #ff5714;
 }
 
+.fa-envelope {
+  color: #0f4c5c;
+}
+
+.fa-lock {
+  color: #0f4c5c;
+  padding: 2px;
+}
+
 #login-form {
   border: 1px solid gray;
   border-radius: 8px;
@@ -71,9 +80,9 @@ body {
 }
 
 .card {
-  background-color: #0f4c5c !important; //dark blue teal
+  background-color: #0f4c5c !important;
   border-radius: 15px !important;
-  border: 2px solid #ff5714 !important; //orange;
+  border: 2px solid #ff5714 !important;
   opacity: .85 !important;
   max-width: 350px !important;
 }

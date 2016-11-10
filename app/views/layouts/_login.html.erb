@@ -2,6 +2,7 @@
   <% if current_user %>
     <%= link_to 'Go Home', '/' %> |
     <%= link_to 'My Profile', user_path(session['id']) %> |
+    <%= link_to 'Play!', sports_path %> |
     <%= link_to 'Logout', session_path(session['id']), method: :delete%>
   <% end %>
 </div>
