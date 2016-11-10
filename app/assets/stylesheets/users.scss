@@ -4,10 +4,10 @@
 
 #user-show-page-container {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 20%,rgba(0,0,0,0.6) 60%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
   background-size:cover;
   z-index: -1;
-  color: #dce1e9;
+  color: white;
 }
 #user-show-page-container h2{
   margin: 0;
@@ -82,11 +82,20 @@
 }
 
 .profile {
-  background-color: #ff5714;
+  background-color: #0f4c5c;
+  border: 1px solid #ff5714;
   color: #fff;
   font-size: .9em;
   border-radius: 5px;
   padding: 1px;
   padding-right: 3px;
   padding-left: 3px
+}
+
+.profile-pic img{
+  border-radius: 20%;
+  width: 15em;
+  height: 15em;
+  border: 3px solid #ff5714;
+  margin-bottom: 1%;
 }
