@@ -1,17 +1,17 @@
 <div id="match-show-page-container">
+  <h2><%= "#{@sport["category"]} #{@sport["name"]}" %> Match</h2>
 
-  <h2>Match Show</h2>
   <div class="match-show-container">
 
-        <div id="home-team-container">
-            <h2 align="center">Home Team</h2>
+        <div id="home-team-container" class="team-container">
+            <h2>Home Team</h2>
             <%= render partial: 'matches/team', locals: { team: @home_team} %>
         </div>
         <div id="vs-container">
-          <h3>Versus.</h3>
+          <h3>VS</h3>
         </div>
-        <div id="away-team-container">
-            <h2 align="center">Away Team</h2>
+        <div id="away-team-container" class="team-container">
+            <h2>Away Team</h2>
             <%= render partial: 'matches/team', locals: { team: @away_team} %>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <% end %>
         <% else %>
         <h4>
-          You may update the score after the match has past
+          You may update the score after the match has finished.
         </h4>
       <% end %>
 
