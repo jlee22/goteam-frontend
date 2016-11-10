@@ -15,7 +15,7 @@
             <%= render partial: 'matches/team', locals: { team: @away_team} %>
         </div>
     </div>
-      <% if @match["match"]["date"] < DateTime.now.strftime("%d/%m/%Y %H:%M")%>
+      <% if DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M") < DateTime.now%>
         <% if @match["Home"]["score"] &&  @match["Away"]["score"] %>
         <div class="">
             Home :
