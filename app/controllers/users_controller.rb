@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-
+  include UsersHelper
   def show
-    @user = UsersHelper.get(current_user['id'])
-    @stats = StatsHelper.list(current_user['id'])
-    @matches = MatchesHelper.list(current_user['id'])
+    @user = UsersHelper.get(session)
+    @stats = StatsHelper.list(session)
+    @matches = MatchesHelper.list(session)
     @upcoming_matches = []
     @past_matches = []
     @matches.each do |match|
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def create
     @user = UsersHelper.post({"user"=>
-    {"first_name"=>params['first_name'], "last_name"=>params['last_name'],"email"=>params['email'], "city"=>params['city'], "street"=>params['street'], "state"=>params['state'], "zip"=>params['zip'], "phone"=>params['phone'],"email"=>params['email'], "password"=>params['password']}})
+    {"first_name"=>params['first_name'], "last_name"=>params['last_name'],"email"=>params['email'], "city"=>params['city'], "street"=>params['street'], "state"=>params['state'], "zip"=>params['zip'], "phone"=>params['phone'], "password"=>params['password']}})
     if @user['id'] != nil
       redirect_to root_path
     else

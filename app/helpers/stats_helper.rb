@@ -2,8 +2,8 @@ module StatsHelper
 
   URL = 'https://api-goteam.herokuapp.com/api'
 
-  def self.list(current_user_id)
-    HTTParty.get(URL + "/users/#{current_user_id}/stats.json")
+  def self.list(session)
+    HTTParty.get(URL + "/users/"+ session[:id].to_s + "/stats.json?token=" + session[:token].to_s).parsed_response
   end
 
   def self.create(current_user_id, sport_id)

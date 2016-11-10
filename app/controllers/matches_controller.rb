@@ -1,5 +1,21 @@
 class MatchesController < ApplicationController
 
+
+  def index
+    @matches = MatchesHelper.list(session)
+    @upcoming_matches = []
+    @past_matches = []
+    @matches.each do |match|
+      match.each do |k,v|
+        if v['date'] > DateTime.now
+          @upcoming_matches << match
+        elsif v['date'] < DateTime.now 
+          @past_matches << match
+        end
+      end
+    end
+  end
+
   def show
     # @location = HTTParty.get(URL + 'matches/')
     @match = MatchesHelper.get(current_user['id'], params['id'])

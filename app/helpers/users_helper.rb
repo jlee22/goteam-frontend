@@ -2,16 +2,16 @@ module UsersHelper
 
   URL = 'https://api-goteam.herokuapp.com/api'
 
-  def self.get(id)
-    HTTParty.get(URL + "/users/#{id}.json")
+  def self.get(session)
+    HTTParty.get(URL + "/users/+"+ session[:id].to_s + ".json?token=" + session[:token].to_s).parsed_response
   end
 
   def self.post(body_hash)
     HTTParty.post(URL + '/users.json', :body=>body_hash)
   end
-  
+
   def current_user
-    user = HTTParty.get(URL + "/users/#{session[:id]}.json")
+    user = HTTParty.get(URL + "/users/" + session[:id].to_s + ".json?token=" + session[:token].to_s).parsed_response
     @current_user||= user if session[:id]
   end
 
@@ -20,11 +20,13 @@ module UsersHelper
   end
 
   def login(user)
-    session[:id] = user['id']
+      session[:id] = user.parsed_response["user"]['id']
+      session[:token] = user.parsed_response["token"]
   end
 
   def logout
     session[:id] = nil
+    session[:token] = nil
   end
 
 end
