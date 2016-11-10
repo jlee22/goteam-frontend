@@ -1,10 +1,23 @@
+<div id="match-show-page-container">
+  <h2>Match Show</h2>
+  <div class="match-show-container">
+      <p>Rendering the score partial for checking</p>
 
+      <div id="home-team-container">
+        <%= render partial: 'matches/team', locals: { team: @home_team} %>
+      </div>
 
+      <div class="score-container">
+        <%= render 'matches/score' %>
+      </div>
 
-<h2>Match Show</h2>
+      <div id="away-team-container">
+        <%= render partial: 'matches/team', locals: { team: @away_team} %>
+      </div>
 
-<p>Rendering the score partial for checking</p>
-<%= render partial: 'matches/team', locals: { team: @home_team} %>
-<%= render partial: 'matches/team', locals: { team: @away_team} %>
-<%= render 'matches/score' %>
-<%= render 'matches/map' %>
+      <div class="map-container">
+        <%= render 'matches/map' %>
+      </div>
+
+  </div>
+</div>

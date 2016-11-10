@@ -38,7 +38,57 @@
   background-color: 'blue';
 }
 
-.matches-index-container {
-  margin-left: 2%;
-  margin-top: 1%;
+
+#match-show-page-container {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
+  background-size:cover;
+  z-index: -1;
+  color: #dce1e9;
+}
+
+#match-show-page-container h2{
+  margin: 0;
+}
+.match-show-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: 15px;
+  font-size: 1.5em;
+}
+
+.home-team-container {
+  width: 32%;
+}
+.score-container {
+  width: 32%;
+}
+.away-team-container {
+  width: 32%;
+}
+
+.matches-container img {
+  width: .9em;
+  height: .9em;
+
+  margin-right: 3px;
+}
+
+.match-details-container {
+  margin-bottom: 3%;
+}
+
+.details-container {
+  margin-left: 1%;
+}
+
+.profile {
+  background-color: #ff5714;
+  color: #fff;
+  font-size: .9em;
+  border-radius: 5px;
+  padding: 1px;
+  padding-right: 3px;
+  padding-left: 3px
 }
