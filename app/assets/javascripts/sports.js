@@ -53,7 +53,7 @@ $(document).on("turbolinks:load", function() {
       })
 
       request.fail(function(response) {
-        alert(response);
+        
       })
     })
 }
