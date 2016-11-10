@@ -3,15 +3,13 @@
   <div id="tabs" class='debug'>
     <ul>
       <% @sports.each_with_index do |sport,index| %>
-      <li><a href="#fragment-<%= index %>"><%= sport['category'] %> <%= sport['name'] %></a></li>
+        <% if index < 4 %>
+          <li>
+            <a href="#fragment-<%= index %>"><%= sport['category'] %> <%= sport['name'] %></a>
+          </li>
+        <% end %>
       <% end %>
     </ul>
-
-    <% @sports.each_with_index do |sport,index| %>
-      <div id="fragment-<%= index %>">
-        <%= sport['name'] %><%= sport['category'] %>
-      </div>
-    <% end %>
     <%= render partial: 'index_map', locals: {locations: @tennis_singles, blah:@BLAH} %>
   </div>
 </div>

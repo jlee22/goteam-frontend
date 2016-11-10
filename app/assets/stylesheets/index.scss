@@ -6,16 +6,17 @@
 }
 
 #matches-in-area-container {
+  padding: 20px;
 }
 
 #matches-in-area-container h4{
-  align-content: center;
+  text-align: center;
   color: #dce1e9;
 }
 
 #tabs{
   max-width: 60%;
-
+  max-height: 80%;
   margin: 0px auto;
 
 }
@@ -23,6 +24,7 @@
 #index-map{
   height: 80%;
   margin: 10px;
-  padding: 0;
+  border-radius: 35px;
+  margin-top: 50px;
   opacity: 1 !important;
 }
