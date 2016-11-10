@@ -1,24 +1,24 @@
 <div id="sport-show-container">
-  <div class="sport-title">
+  <div id="sport-info-container">
+
     <h2><%= "#{@sport["category"]} #{@sport["name"]}" %></h2>
-  </div>
+    <div id='sport-description-container'>
+      <h3>Description</h3>
+      <%= @sport["description"] %>
+    </div>
 
-  <div id='sport-description-container'>
-    <h3>Description</h3>
-    <%= @sport["description"] %>
-  </div>
+    <div id='sport-video-container'>
+      <iframe width="420" height="315" src=<%= @sport["video_url"] %>>
+    </iframe>
+    </div>
 
-  <div class='sport-video-container'>
-    <iframe width="420" height="315" src=<%= @sport["video_url"] %>>
-  </iframe>
-  </div>
-
-  <!-- Stat PUT route. Change to active for particular sport -->
-  <div class="find-match-container">
-    <% if @stat["active"] == "false" %>
-      <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true"), method: :put, id: "find-match-link") %>
-    <% else %>
-      <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
-    <% end %>
+    <!-- Stat PUT route. Change to active for particular sport -->
+    <div class="find-match-container">
+      <% if @stat["active"] == "false" %>
+        <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true"), method: :put, id: "find-match-link") %>
+      <% else %>
+        <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
+      <% end %>
+    </div>
   </div>
 </div>
