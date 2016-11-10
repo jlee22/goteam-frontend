@@ -33,37 +33,18 @@
   opacity: .9;
 }
 
-#home-team-container {
-  float: left;
-}
-
-#away-team-container {
-  float: right;
-}
-
-.team{
-  background-color: 'blue';
-}
-
-
 #match-show-page-container {
-  margin-top: 2%;
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
   background-size:cover;
   z-index: -1;
   color: #dce1e9;
-  align-items: baseline;
+  align-items: center;
 }
 
-#match-show-container > h2{
-  align-text: center;
-}
 .match-show-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-left: 15px;
+  justify-content: space-around;
   font-size: 1.5em;
   background-color: blue;
 }
@@ -84,6 +65,26 @@
   width: 32%;
 }
 
+#home-team-container {
+  position: relative;
+}
+
+#away-team-container {
+  position: relative;
+}
+
+.team{
+  background-color: 'blue';
+}
+
+.team-container {
+  text-align: center;
+}
+
+#vs-container > h3 {
+  font-size: 1.5em;
+}
+
 #all-matches-container {
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
@@ -95,8 +96,8 @@
 }
 
 h4 {
-  text-align: left;
-  margin-left: 2%;
+  text-align: center;
+  // margin-left: 2%;
 }
 
 #all-matches-container img {
