@@ -12,10 +12,13 @@
 
 </div>
 
+<% if @message %>
+  <%= @message %>
+<%end%>
 <!-- Stat PUT route. Change to active for particular sport -->
 <div class="find-match-container">
   <% if @stat["active"] == "false" %>
-    <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true"), method: :put, id: "find-match-link") %>
+    <%= link_to("Find a match", user_stat_path(current_user["id"], @stat["id"], active: "true", sport: @sport), method: :put, id: "find-match-link") %>
   <% else %>
     <%= link_to("Cancel Search", user_stat_path(current_user["id"], @stat["id"], active: "false"), method: :put, id: "cancel-search-link") %>
   <% end %>
