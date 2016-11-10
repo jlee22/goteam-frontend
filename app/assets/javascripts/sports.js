@@ -3,7 +3,7 @@
 
 $(document).on("turbolinks:load", function() {
   submitSportListener();
-  findMatchListener();
+  // findMatchListener();
 })
 
   var submitSportListener = function() {

@@ -6,11 +6,14 @@ class UsersController < ApplicationController
     @matches = MatchesHelper.list(session)
     @upcoming_matches = []
     @past_matches = []
+    p "------------------"
+    p DateTime.now
+    p "------------------"
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'] > DateTime.now && @upcoming_matches.length < 3
+        if v['date'] > DateTime.now.strftime("%d/%m/%Y %H:%M") && @upcoming_matches.length < 3
           @upcoming_matches << match
-        elsif v['date'] < DateTime.now && @past_matches.length < 3
+        elsif v['date'] < DateTime.now.strftime("%d/%m/%Y %H:%M") && @past_matches.length < 3
           @past_matches << match
         end
       end
