@@ -2,11 +2,16 @@ class SessionsController < ApplicationController
 
   def create
     @user = sign_in
+    if @user.parsed_response["message"]
+      flash[:notice] = "Wrong Email or Password"
+      redirect_to "/"
+    else
     login(@user)
     p "----------" * 5
     p @user
     p "----------" * 5
     redirect_to "/users/#{session['id']}"
+  end
   end
 
   def destroy

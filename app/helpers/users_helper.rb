@@ -20,8 +20,8 @@ module UsersHelper
   end
 
   def login(user)
-    session[:id] = user.parsed_response["user"]['id']
-    session[:token] = user.parsed_response["token"]
+      session[:id] = user.parsed_response["user"]['id']
+      session[:token] = user.parsed_response["token"]
   end
 
   def logout
