@@ -1,6 +1,7 @@
 module UsersHelper
 
-  URL = 'https://api-goteam.herokuapp.com/api'
+  # URL = 'https://api-goteam.herokuapp.com/api'
+  URL = "http://localhost:3001/api"
 
   def self.get(id)
     HTTParty.get(URL + "/users/#{id}.json")
@@ -9,7 +10,7 @@ module UsersHelper
   def self.post(body_hash)
     HTTParty.post(URL + '/users.json', :body=>body_hash)
   end
-  
+
   def current_user
     user = HTTParty.get(URL + "/users/#{session[:id]}.json")
     @current_user||= user if session[:id]

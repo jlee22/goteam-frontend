@@ -25,9 +25,14 @@ $(document).on("turbolinks:load", function() {
           for(var i=0; i < response.length; i++) {
             var sportLink = "/sports/" + response[i].id;
             var sportId = response[i].name;
-            var fullSportLink = '<span class="sport-link-span"><a href="' + sportLink + '">'+sportId+'</a></span>'
-            submitSportTarget.hide();
-            submitSportTarget.parent().append(fullSportLink);
+            var fullSportLink = '<a class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
+            // submitSportTarget.hide()
+            submitSportTarget.parent().hide();
+            // $("#sports-type-container").addClass("sport-button")
+            $("#sports-type-container").append(fullSportLink)
+            // Append to inner sports button div
+            // submitSportTarget.parent().append(fullSportLink);
+
           }
         })
       })

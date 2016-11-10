@@ -1,6 +1,7 @@
 module StatsHelper
 
-  URL = 'https://api-goteam.herokuapp.com/api'
+  # URL = 'https://api-goteam.herokuapp.com/api'
+  URL = "http://localhost:3001/api"
 
   def self.list(current_user_id)
     HTTParty.get(URL + "/users/#{current_user_id}/stats.json")
