@@ -22,7 +22,6 @@
       position: location,
       animation: google.maps.Animation.DROP,
       label: labels[i % labels.length]
-
     });
    });
 
@@ -34,6 +33,7 @@
       var markerCluster = new MarkerClusterer(map, markers,
         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'})
     }
+
   </script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['BLAH']%>&callback=initMap">
