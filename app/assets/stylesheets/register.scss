@@ -19,18 +19,19 @@
   z-index: -1;
 }
 
-.register-page-container p {
-  font-size: 1.2em;
-  border-bottom: 1px solid gray;
+.register-div {
+  border-top: 1px solid gray;
+  margin-top: 4%;
+  padding-top: 4%;
 }
 
 .register-form {
-  font-size: .9em;
+  font-size: 1.1em;
   width: auto;
   border: 1px solid gray;
   border-radius: 8px;
   background-color: #fff;
-  padding: 1em;
+  padding: 2em;
   padding-top: 1em;
   opacity: 0.85;
 }

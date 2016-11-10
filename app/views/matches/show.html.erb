@@ -1,25 +1,43 @@
 <div id="match-show-page-container">
-  <h2 align="center">Match Show</h2>
+
+  <h2>Match Show</h2>
   <div class="match-show-container">
 
-      <div id="home-team-container">
-      <h2 align="center">Home Team</h2>
-        <%= render partial: 'matches/team', locals: { team: @home_team} %>
-      </div>
+        <div id="home-team-container">
+            <h2 align="center">Home Team</h2>
+            <%= render partial: 'matches/team', locals: { team: @home_team} %>
+        </div>
+        <div id="vs-container">
+          <h3>Versus.</h3>
+        </div>
+        <div id="away-team-container">
+            <h2 align="center">Away Team</h2>
+            <%= render partial: 'matches/team', locals: { team: @away_team} %>
+        </div>
+    </div>
+      <% if @match["match"]["date"] < DateTime.now.strftime("%d/%m/%Y %H:%M")%>
+        <% if @match["Home"]["score"] &&  @match["Away"]["score"] %>
+        <div class="">
+            Home :
+            <%= @match["Home"]["score"]  %>
+            Away :
+            <%= @match["Away"]["score"]  %>
+        </div>
+        <% else %>
+        <div class="score-container">
+            <%= render partial: 'matches/score' , locals: { match: @match} %>
+        </div>
+        <% end %>
+        <% else %>
+        <h4>
+          You may update the score after the match has past
+        </h4>
+      <% end %>
 
-      <div class="score-container">
-        <%= render partial: 'matches/score' , locals: { match: @match} %>
-      </div>
-
-      <div id="away-team-container">
-      <h2 align="center">Away Team</h2>
-        <%= render partial: 'matches/team', locals: { team: @away_team} %>
-      </div>
-
-      <%= render 'matches/map' %>
+        <%= render 'matches/map' %>
         <div class="map-container">
-          <%= render 'matches/map' %>
+            <%= render 'matches/map' %>
         </div>
 
-    </div>
-  </div>
+
+</div>

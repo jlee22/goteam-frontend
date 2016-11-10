@@ -24,6 +24,7 @@ body {
   padding: 2em;
   padding-top: 1em;
   opacity: 0.85;
+  font-size: 1.7em;
 }
 
 #login-page-container {
@@ -36,7 +37,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 20%,rgba(0,0,0,0.6) 50%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 20%,rgba(0,0,0,0.5) 70%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
   background-size:cover;
   z-index: -1;
 }
