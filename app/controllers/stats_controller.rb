@@ -9,6 +9,7 @@ class StatsController < ApplicationController
         @sport = params["sport"]
         render "sports/show"
       else
+        @match = created_match
         @sport = params["sport"]
         @home_team = created_match['Home_team']
         @away_team = created_match['Away_team']
