@@ -1,32 +1,36 @@
-<h2>Matches Index For User</h2>
 
-<div class="matches-container">
-  <% if @upcoming_matches.count > 0 %>
-  <h4> Upcoming Matches: </h4>
-    <% @upcoming_matches.each do |match| %>
-      <% match.each do |category,details| %>
-        <% sport_icon = SportsHelper.get_sport_icon(category) %>
-        <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
-          <div class="details-container">
-            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+<div class="matches-index-container">
+  <h2>All Matches for <%= current_user['first_name'] %></h2>
+
+  <div class="matches-container">
+    <% if @upcoming_matches.count > 0 %>
+    <h4> Upcoming Matches: </h4>
+      <% @upcoming_matches.each do |match| %>
+        <% match.each do |category,details| %>
+          <% sport_icon = SportsHelper.get_sport_icon(category) %>
+          <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+            <div class="details-container">
+              <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+              <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
 
-  <% if @past_matches.count > 0 %>
-  <h4> Past Matches: </h4>
-    <% @past_matches.each do |match| %>
-      <% match.each do |category,details| %>
-        <% sport_icon = SportsHelper.get_sport_icon(category) %>
-        <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
-          <div class="details-container">
-            <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+    <% if @past_matches.count > 0 %>
+    <h4> Past Matches: </h4>
+      <% @past_matches.each do |match| %>
+        <% match.each do |category,details| %>
+          <% sport_icon = SportsHelper.get_sport_icon(category) %>
+          <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+            <div class="details-container">
+              <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+              <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
+
+  </div>
