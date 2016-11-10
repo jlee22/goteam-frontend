@@ -25,11 +25,12 @@ $(document).on("turbolinks:load", function() {
           for(var i=0; i < response.length; i++) {
             var sportLink = "/sports/" + response[i].id;
             var sportId = response[i].name;
-            var fullSportLink = '<a class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
+            var formSportLink = '<form action="' + sportLink + '"><input class="sport-button" type="submit" value= '+ sportId +' /></form>'
+            var fullSportLink = '<button class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
             // submitSportTarget.hide()
             submitSportTarget.parent().hide();
             // $("#sports-type-container").addClass("sport-button")
-            $("#sports-type-container").append(fullSportLink)
+            $("#sports-type-container").append(formSportLink)
             // Append to inner sports button div
             // submitSportTarget.parent().append(fullSportLink);
 
