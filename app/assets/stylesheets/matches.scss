@@ -1,7 +1,14 @@
 // Place all the styles related to the matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+#matches-index-container {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
+  background-size:cover;
+  z-index: -1;
+  color: #dce1e9;
+  text-align: center;
+}
 
 #matches-in-area-container{
   width: 100%;
@@ -76,14 +83,25 @@
   width: 32%;
 }
 
-.matches-container img {
+#all-matches-container {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  font-size: 1.5em;
+  .match-details-container {
+    margin-bottom: 0;
+  }
+}
+
+h4 {
+  text-align: left;
+  margin-left: 2%;
+}
+
+#all-matches-container img {
   width: .9em;
   height: .9em;
   margin-right: 3px;
-}
-
-.match-details-container {
-  margin-bottom: 3%;
 }
 
 .details-container {
