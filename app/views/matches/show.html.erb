@@ -8,7 +8,7 @@
       </div>
 
       <div class="score-container">
-        <%= render 'matches/score' %>
+        <%= render partial: 'matches/score' , locals: { match: @match} %>
       </div>
 
       <div id="away-team-container">
@@ -16,9 +16,10 @@
         <%= render partial: 'matches/team', locals: { team: @away_team} %>
       </div>
 
-      <div class="map-container">
-        <%= render 'matches/map' %>
-      </div>
+      <%= render 'matches/map' %>
+        <div class="map-container">
+          <%= render 'matches/map' %>
+        </div>
 
+    </div>
   </div>
-</div>
