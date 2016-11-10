@@ -8,10 +8,10 @@ class UsersController < ApplicationController
     @past_matches = []
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'].gsub("-","") > DateTime.now.strftime("%Y-%m-%d %H:%M").gsub("-","") && @upcoming_matches.length < 3
-          p v['date'].gsub("-","") > DateTime.now.strftime("%Y-%m-%d %H:%M").gsub("-","")
-          p v['date'].gsub("-","")
-          p DateTime.now.strftime("%Y-%m-%d %H:%M").gsub("-","")
+        if DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") > DateTime.now && @upcoming_matches.length < 3
+          p DateTime.strptime(v['date'],"%Y-%m-%d %H:%M")
+          p DateTime.now
+          p DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") > DateTime.now.strftime("%Y-%m-%d %H:%M")
           @upcoming_matches << match
         elsif v['date'] > DateTime.now.strftime("%Y-%m-%d %H:%M") && @past_matches.length < 3
           @past_matches << match
