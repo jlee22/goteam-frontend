@@ -10,7 +10,7 @@
           <% sport_icon = SportsHelper.get_sport_icon(category) %>
           <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
             <div class="details-container">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
+              <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'].gsub(/"|\[|\]/, '') %><br>
               <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
             </div>
           </div>
