@@ -14,9 +14,6 @@ class MatchesController < ApplicationController
         end
       end
     end
-    p line
-    p @past_matches[0..5]
-    p line
   end
 
   def show
