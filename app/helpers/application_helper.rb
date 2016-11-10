@@ -9,4 +9,8 @@ module ApplicationHelper
     'http://localhost:3001/api'
   end
 
+  def line
+    '===================================================='
+  end
+
 end
