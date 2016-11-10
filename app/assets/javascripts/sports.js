@@ -26,7 +26,7 @@ $(document).on("turbolinks:load", function() {
             var sportLink = "/sports/" + response[i].id;
             var sportId = response[i].name;
             var formSportLink = '<form action="' + sportLink + '"><input class="sport-button" type="submit" value= '+ sportId +' /></form>'
-            var fullSportLink = '<button class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
+            // var fullSportLink = '<button class="sport-button" href="' + sportLink + '">'+sportId+'</a>'
             // submitSportTarget.hide()
             submitSportTarget.parent().hide();
             // $("#sports-type-container").addClass("sport-button")

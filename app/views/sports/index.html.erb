@@ -1,6 +1,6 @@
-<h3>Sports Index</h3>
 
 <div id="sports-index-container">
+<h3>Select a Sport</h3>
 
   <div id="sports-type-container">
   </div>
@@ -9,7 +9,7 @@
   <% @uniq_sports.each do |sport| %>
     <%= form_for(:sport, url: "/sports/type", html: {class: "submit-sport-form"}) do |f| %>
       <%= f.hidden_field :category, value: sport["category"] %>
-      <%= f.submit sport["category"],class: 'sport-button', id: sport["category"].gsub(" ","") + '-button'  %>
+      <%= f.submit "", class: 'sport-button', id: sport["category"].gsub(" ","") + '-button'  %>
     <% end %>
   <% end %>
   </div>
