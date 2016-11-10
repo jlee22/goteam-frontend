@@ -16,18 +16,35 @@
     {lat:   37.763321, lng:  -122.407946}
     ]
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var urls = "localhost:3000/users/1/matches/1/";
 
     var markers = locations.map(function(location, i) {
      return new google.maps.Marker({
       position: location,
       animation: google.maps.Animation.DROP,
-      label: labels[i % labels.length]
+      label: labels[i % labels.length],
+      url: urls
     });
    });
 
+    markers.forEach(function(marker){
+      marker.addListener('click', function() {
+        map.setZoom(15);
+        map.setCenter(marker.getPosition());
+
+      });
+      marker.addListener('dblclick', function() {
+        console.log(marker.url);
+        window.location.href = '/users/1/matches/1/';
+        window.location.replace("/users/1/matches/1/");
+
+      });
+    })// foreach loop close
+
     google.maps.event.addListener(markers,'click', function() {
-      map.setZoom(8);
+      map.setZoom(15);
       map.setCenter(this.getPosition());
+
     });
 
       var markerCluster = new MarkerClusterer(map, markers,

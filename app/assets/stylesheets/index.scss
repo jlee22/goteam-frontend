@@ -11,20 +11,32 @@
 
 #matches-in-area-container h4{
   text-align: center;
-  color: #dce1e9;
+  color: $color3;
 }
 
 #tabs{
-  max-width: 60%;
+  max-width: 50%;
   max-height: 80%;
-  margin: 0px auto;
+  margin: 20px auto;
+  border-radius: 45px 45px 35px 35px;
 
+  .ui-tabs-tab{
+    margin-right: 20px;
+  }
+  .ui-widget-header{
+    max-width: 99%;
+  }
+  .ui-corner-all{
+    opacity: .5;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    background: $color2;
+  }
 }
 
 #index-map{
-  height: 80%;
-  margin: 10px;
-  border-radius: 35px;
-  margin-top: 50px;
+  height: 95%;
+  border-radius: 0px 0px 35px 35px;
+  margin-top: 0px;
   opacity: 1 !important;
 }
