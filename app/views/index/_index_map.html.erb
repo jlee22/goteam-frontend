@@ -1,38 +1,41 @@
 <div id="index-map"></div>
-  <script>
+<script>
+  function initMap() {
+    var san_francisco = {lat: 37.7845165, lng: -122.3971939};
+    var map = new google.maps.Map(document.getElementById('index-map'), {
+      zoom: 13,
+      center: san_francisco
+    });
 
-      console.log(<%= blah %>);
-      function initMap() {
-        var san_francisco = {lat: 37.7845165, lng: -122.3971939};
-        var map = new google.maps.Map(document.getElementById('index-map'), {
-          zoom: 15,
-          center: san_francisco
-        });
+    var locations = [
+    {lat: 37.767221, lng: -122.442799},
+    {lat: 37.725744, lng:  -122.483349},
+    {lat: 37.786281, lng:  -122.438163},
+    {lat: 37.779287, lng: -122.396036},
+    {lat: 37.764863, lng:  -122.409679},
+    {lat:   37.763321, lng:  -122.407946}
+    ]
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-      var locations = [
-                {lat: 37.767221, lng: -122.442799},
-                {lat: 37.725744, lng:  -122.483349},
-                {lat: 37.786281, lng:  -122.438163},
-                {lat: 37.779287, lng: -122.396036},
-                {lat: 37.764863, lng:  -122.409679},
-                {lat:   37.763321, lng:  -122.407946}
-              ]
-      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var markers = locations.map(function(location, i) {
+     return new google.maps.Marker({
+      position: location,
+      animation: google.maps.Animation.DROP,
+      label: labels[i % labels.length]
 
-      var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-          });
-        });
+    });
+   });
+
+    google.maps.event.addListener(markers,'click', function() {
+      map.setZoom(8);
+      map.setCenter(this.getPosition());
+    });
+
       var markerCluster = new MarkerClusterer(map, markers,
-      { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'})
-
-
-      }
-</script>
-  <script async defer
-
-    src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['BLAH']%>&callback=initMap">
+        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'})
+    }
   </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['BLAH']%>&callback=initMap">
+</script>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>

@@ -1,5 +1,5 @@
 <div id="matches-in-area-container">
-  <h4 class="matches-header" align="center"> Current Matches In Your Area: </h4>
+  <h4 class="matches-header"> Current Matches In Your Area: </h4>
   <div id="tabs" class='debug'>
     <ul>
       <% @sports.each_with_index do |sport,index| %>
@@ -10,8 +10,6 @@
         <% end %>
       <% end %>
     </ul>
-
-
     <%= render partial: 'index_map', locals: {locations: @tennis_singles, blah:@BLAH} %>
   </div>
 </div>
