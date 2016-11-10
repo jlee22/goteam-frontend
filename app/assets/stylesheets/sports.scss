@@ -15,10 +15,9 @@
   display: none
 }
 
-#sports-index-container {
-  // margin-top: -71px;
+#sports-index-container, #sport-show-container {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://static.pexels.com/photos/163444/sport-treadmill-tor-route-163444.jpeg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(http://atxsportsphotos.com/assets_d/54976/web_media/3ds_grass_texture241_173.jpg);
   background-size:cover;
   z-index: -1;
   color: #dce1e9;
@@ -44,8 +43,6 @@ padding: 5px;
 }
 
 .sport-button {
-  // display: inline-block;
-  // background-color: #0f4c5c;
   color: white;
   text-align: center;
   transition: all 0.5s;
@@ -68,6 +65,7 @@ padding: 5px;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 
 #Tennis-button {
   background-image: url("sport_icons/tennis-ball.svg");
