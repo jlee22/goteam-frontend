@@ -1,9 +1,9 @@
 <div id="match-show-page-container">
-  <h2>Match Show</h2>
+  <h2 align="center">Match Show</h2>
   <div class="match-show-container">
-      <p>Rendering the score partial for checking</p>
 
       <div id="home-team-container">
+      <h2 align="center">Home Team</h2>
         <%= render partial: 'matches/team', locals: { team: @home_team} %>
       </div>
 
@@ -12,6 +12,7 @@
       </div>
 
       <div id="away-team-container">
+      <h2 align="center">Away Team</h2>
         <%= render partial: 'matches/team', locals: { team: @away_team} %>
       </div>
 
