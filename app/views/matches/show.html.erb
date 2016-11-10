@@ -19,7 +19,7 @@
         </div>
     </div>
       <% if DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M") < DateTime.now%>
-        <% if @match["Home"]["score"] &&  @match["Away"]["score"] %>
+        <% if @match["Home"]["updated?"] &&  @match["Away"]["updated?"] %>
         <div class="">
             Home :
             <%= @match["Home"]["score"]  %>

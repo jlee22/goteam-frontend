@@ -1,3 +1,4 @@
+@import 'palette';
 // Color Palette
 // #ff5714;
 // #66c3ff;
@@ -11,8 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: .2em;
-  color: #ff5714;
-  background-color: #0f4c5c;
+  color: $color3;
+  background-color: $color4;
   border-bottom: 10px solid #ff5714;
 }
 

@@ -8,20 +8,17 @@ class UsersController < ApplicationController
     @past_matches = []
     @matches.each do |match|
       match.each do |k,v|
-        if DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") > DateTime.now && @upcoming_matches.length < 3
-          p DateTime.strptime(v['date'],"%Y-%m-%d %H:%M")
-          p DateTime.now
-          p DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") > DateTime.now.strftime("%Y-%m-%d %H:%M")
+        p line
+        p DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M")
+        p DateTime.now
+        p DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M") > DateTime.now
+        if (DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M") > DateTime.now) && (@upcoming_matches.length < 3)
           @upcoming_matches << match
-        elsif v['date'] > DateTime.now.strftime("%Y-%m-%d %H:%M") && @past_matches.length < 3
+        elsif (DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M") < DateTime.now) && (@past_matches.length < 3)
           @past_matches << match
         end
       end
     end
-    p '--------' * 3
-    p @past_matches
-    p @upcoming_matches
-    p '--------' * 3
   end
 
   def create
