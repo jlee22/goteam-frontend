@@ -62,8 +62,9 @@
 
 }
 .score-container {
+  margin: auto;
+  width: 50%;
   padding: 10px;
-  width: 32%;
 }
 .away-team-container {
   padding: 10px;
@@ -104,7 +105,7 @@
   }
 }
 
-h4, h2 {
+#match-show-page-container h4, h2 {
   text-align: center;
 }
 
