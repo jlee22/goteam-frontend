@@ -4,7 +4,9 @@
 <h2>Match Show</h2>
 
 <p>Rendering the score partial for checking</p>
+<div id="home-team-container">
 <%= render partial: 'matches/team', locals: { team: @home_team} %>
+</div>
 <%= render partial: 'matches/team', locals: { team: @away_team} %>
 <%= render 'matches/score' %>
 <%= render 'matches/map' %>
