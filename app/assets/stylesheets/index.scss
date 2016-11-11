@@ -15,23 +15,30 @@
 }
 
 #tabs{
-  max-width: 50%;
+  opacity: .3;
+  max-width: 60%;
   max-height: 80%;
   margin: 20px auto;
   border-radius: 45px 45px 35px 35px;
 
   .ui-tabs-tab{
-    margin-right: 20px;
+    background: $color1;
+    margin-left: 20px;
   }
   .ui-widget-header{
+    opacity: .1;
     max-width: 99%;
+    .ui-tabs-anchor{
+    opacity: .9;
+    color: $color3;
+    }
   }
   .ui-corner-all{
-    opacity: .5;
-    border-top-left-radius: 55px;
-    border-top-right-radius: 55px;
+    opacity: .7;
+    border-radius: 45px 45px 0px 0px;
     background: $color2;
   }
+
 }
 
 #index-map{
