@@ -1,8 +1,11 @@
 <div id="match-show-page-container">
   <h2><%= "#{@sport["category"]} #{@sport["name"]}" %> Match</h2>
-  <h3><%= @location %></h3>
-  <h3><%= @day %></h3>
-  <h3><%= @time %></h3>
+  <div class='match-p-tags'>
+    <p><%= @location %></p>
+    <p><%= @day %></p>
+    <p><%= @time %></p>
+  </div>
+
 
   <div class="match-show-container">
 
@@ -11,7 +14,7 @@
             <%= render partial: 'matches/team', locals: { team: @home_team} %>
         </div>
         <div id="vs-container">
-          <h2>VS</h2>
+          <h2 class="fadeIn">VS</h2>
         </div>
         <div id="away-team-container" class="team-container">
             <h2>Away Team</h2>
