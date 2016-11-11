@@ -5,11 +5,11 @@
 // For the cancel search link
 
 // Color Palette
-// #ff5714 orange
-// #66c3ff light blue
-// #dce1e9 off white
-// #0f4c5c dark blue teal
-// #2e7689 grey teal
+// #ff5714
+// #66c3ff
+// #dce1e9
+// #0f4c5c
+// #2e7689
 
 .hidden {
   display: none
@@ -29,10 +29,13 @@ padding: 5px;
 }
 
 #sports-buttons-container, #sports-type-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 450px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+  width: 60%;
   margin: 0 auto;
   align-items: center;
 }
@@ -58,7 +61,7 @@ padding: 5px;
 }
 
 .sport-button:hover {
-  transform: scale(1.25);
+  transform: scale(1.08);
 }
 
 .sport-button:active {
@@ -80,6 +83,38 @@ padding: 5px;
 
 #TableTennis-button {
   background-image: url("sport_icons/ping-pong.svg")
+}
+
+#Basketball-button {
+  background-image: url("sport_icons/basketball.svg")
+}
+
+#Volleyball-button {
+  background-image: url("sport_icons/volleyball.svg")
+}
+
+#FlagFootball-button {
+  background-image: url("sport_icons/flag_football.svg")
+}
+
+#Bowling-button {
+  background-image: url("sport_icons/bowling.svg")
+}
+
+#Rails-button {
+  background-image: url("sport_icons/browser.svg")
+}
+
+#Golf-button {
+  background-image: url("sport_icons/golf.svg")
+}
+
+#UltimateFrisbee-button {
+  background-image: url("sport_icons/frisbee.svg")
+}
+
+#Billiards-button {
+  background-image: url("sport_icons/billiards.svg")
 }
 
 #sport-info-container {
