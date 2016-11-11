@@ -4,9 +4,10 @@
   <h2 id="all-match">All Matches for <%= current_user['first_name'] %></h2>
 
   <div id="all-matches-container">
-    <h4> Upcoming Matches </h4>
+    <div class="matches-matches-container">
     <% if @upcoming_matches.count > 0 %>
-      <% @upcoming_matches[0..10].each do |match| %>
+    <h4> Upcoming Matches </h4>
+      <% @upcoming_matches[0..7].each do |match| %>
         <% match.each do |category,details| %>
           <% sport_icon = SportsHelper.get_sport_icon(category) %>
           <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %> <%= link_to("Details", user_match_path(current_user["id"], match[category]['id'])) %><br>
@@ -18,10 +19,11 @@
         <% end %>
       <% end %>
     <% end %>
-
+  </div>
+    <div class="matches-matches-container">
     <% if @past_matches.count > 0 %>
     <h4> Past Matches </h4>
-      <% @past_matches[0..10].each do |match| %>
+      <% @past_matches[0..11].each do |match| %>
         <% match.each do |category,details| %>
           <% sport_icon = SportsHelper.get_sport_icon(category) %>
           <div class='match-details-container'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %> <%= link_to("Details", user_match_path(current_user["id"], match[category]['id'])) %><br>
@@ -33,5 +35,6 @@
         <% end %>
       <% end %>
     <% end %>
+  </div>
   </div>
   </div>

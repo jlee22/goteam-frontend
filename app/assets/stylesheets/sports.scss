@@ -43,11 +43,13 @@ padding: 5px;
 }
 
 .sport-button {
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border:3px solid white;
+  margin-top: 3px;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
   margin-right: 1%;
   margin-top: 65px;
   position: relative;
@@ -56,13 +58,10 @@ padding: 5px;
 }
 
 .sport-button:hover {
-  background-color: #0f4c5c;
-  transform: scale(1.04);
+  transform: scale(1.25);
 }
 
 .sport-button:active {
-  background-color: #ff5714;
-  box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
