@@ -62,7 +62,7 @@
 }
 
 .match-show-container {
-  margin-top: 3%;
+  margin-top: 1%;
   display: flex;
   justify-content: center;
   h2 {
@@ -152,6 +152,17 @@
 
 #match-show-page-container h4, h2 {
   text-align: center;
+  font-size: 1.5em;
+}
+
+.match-p-tags {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.match-p-tags p {
+  margin-bottom: 0 !important;
 }
 
 #all-matches-container img {
@@ -180,5 +191,5 @@
 .match-score-container {
   text-align: center;
   position: relative;
-  bottom: -50%;
+  bottom: -45%;
 }
