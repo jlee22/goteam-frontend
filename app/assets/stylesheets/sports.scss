@@ -26,6 +26,7 @@
 h3 {
 text-align: center;
 padding: 5px;
+padding-top: 20px;
 }
 
 #sports-buttons-container, #sports-type-container {
@@ -48,26 +49,35 @@ padding: 5px;
 .sport-button {
   background-color: rgba(0, 0, 0, 0);
   border:3px solid white;
-  margin-top: 3px;
+  margin: 5%;
+  margin-top: 7%;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 50%;
-  margin-right: 1%;
-  margin-top: 65px;
   position: relative;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 175px;
+  min-height: 175px;
 }
 
 .sport-button:hover {
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 
 .sport-button:active {
   transform: translateY(4px);
 }
 
+#sports-type-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 40%
+}
+
+#sports-type-container button {
+  margin: 5%;
+}
 
 #Tennis-button {
   background-image: url("sport_icons/tennis-ball.svg");
