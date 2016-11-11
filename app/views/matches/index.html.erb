@@ -1,9 +1,10 @@
 
 <div id="matches-index-container">
-  <h2>All Matches for <%= current_user['first_name'] %></h2>
+  <div id="matches-padding">
+  <h2 id="all-match">All Matches for <%= current_user['first_name'] %></h2>
 
-  <h4> Upcoming Matches: </h4>
   <div id="all-matches-container">
+    <h4> Upcoming Matches </h4>
     <% if @upcoming_matches.count > 0 %>
       <% @upcoming_matches[0..10].each do |match| %>
         <% match.each do |category,details| %>
@@ -19,7 +20,7 @@
     <% end %>
 
     <% if @past_matches.count > 0 %>
-    <h4> Past Matches: </h4>
+    <h4> Past Matches </h4>
       <% @past_matches[0..10].each do |match| %>
         <% match.each do |category,details| %>
           <% sport_icon = SportsHelper.get_sport_icon(category) %>
@@ -32,5 +33,5 @@
         <% end %>
       <% end %>
     <% end %>
-
+  </div>
   </div>

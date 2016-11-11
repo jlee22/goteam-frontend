@@ -3,7 +3,7 @@ class StatsController < ApplicationController
   def show
 
   end
-  
+
   def update
     @stat = StatsHelper.update(params["user_id"],params["id"],session,params["active"])
     if params["active"] == "true"
