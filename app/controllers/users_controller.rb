@@ -3,17 +3,20 @@ class UsersController < ApplicationController
   def show
     @user = UsersHelper.get(session)
     @stats = StatsHelper.list(session)
+    @stats_array = []
+    i = 0
+    while i < 10
+      @stats_array << @stats[i.to_s]
+      i += 1
+    end
     @matches = MatchesHelper.list(session)
     @upcoming_matches = []
     @past_matches = []
-    p "------------------"
-    p DateTime.now
-    p "------------------"
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'] > DateTime.now.strftime("%d/%m/%Y %H:%M") && @upcoming_matches.length < 3
+        if (DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M") > DateTime.now) && (@upcoming_matches.length < 3)
           @upcoming_matches << match
-        elsif v['date'] < DateTime.now.strftime("%d/%m/%Y %H:%M") && @past_matches.length < 3
+        elsif (DateTime.strptime("#{v["date"]}","%Y-%m-%d %H:%M") < DateTime.now) && (@past_matches.length < 3)
           @past_matches << match
         end
       end

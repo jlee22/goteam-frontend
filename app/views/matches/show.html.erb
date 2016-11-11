@@ -1,24 +1,41 @@
 <div id="match-show-page-container">
-  <h2>Match Show</h2>
+  <h2><%= "#{@sport["category"]} #{@sport["name"]}" %> Match</h2>
+  <h3><%= @location %></h3>
+  <h3><%= @day %></h3>
+  <h3><%= @time %></h3>
+
   <div class="match-show-container">
-      <p>Rendering the score partial for checking</p>
 
-      <div id="home-team-container">
-        <%= render partial: 'matches/team', locals: { team: @home_team} %>
-      </div>
-
-      <div class="score-container">
-        <%= render partial: 'matches/score' , locals: { match: @match} %>
-      </div>
-
-      <div id="away-team-container">
-        <%= render partial: 'matches/team', locals: { team: @away_team} %>
-      </div>
-
-      <%= render 'matches/map' %>
-        <div class="map-container">
-          <%= render 'matches/map' %>
+        <div id="home-team-container" class="team-container">
+            <h2>Home Team</h2>
+            <%= render partial: 'matches/team', locals: { team: @home_team} %>
         </div>
-
+        <div id="vs-container">
+          <h2>VS</h2>
+        </div>
+        <div id="away-team-container" class="team-container">
+            <h2>Away Team</h2>
+            <%= render partial: 'matches/team', locals: { team: @away_team} %>
+        </div>
     </div>
-  </div>
+    <div class="match-score-container">
+      <% if DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M") < DateTime.now%>
+        <% if @match["Home"]["updated?"] == "true" &&  @match["Away"]["updated?"] == "true" %>
+        <div class="">
+            <h3>Home :
+            <%= @match["Home"]["score"]  %>  &nbsp-&nbsp
+            Away :
+            <%= @match["Away"]["score"]  %></h3>
+        </div>
+        <% else %>
+        <div class="score-container">
+            <%= render partial: 'matches/score' , locals: { match: @match} %>
+        </div>
+        <% end %>
+        <% else %>
+        <h4>
+          You may update the score after the match has finished.
+        </h4>
+      <% end %>
+    </div>
+</div>

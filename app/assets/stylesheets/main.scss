@@ -17,6 +17,15 @@ body {
   color: #ff5714;
 }
 
+.fa-envelope {
+  color: #0f4c5c;
+}
+
+.fa-lock {
+  color: #0f4c5c;
+  padding: 2px;
+}
+
 #login-form {
   border: 1px solid gray;
   border-radius: 8px;
@@ -24,6 +33,7 @@ body {
   padding: 2em;
   padding-top: 1em;
   opacity: 0.85;
+  font-size: 1.7em;
 }
 
 #login-page-container {
@@ -36,7 +46,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 50%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 20%,rgba(0,0,0,0.5) 70%), url(https://static.pexels.com/photos/29578/pexels-photo.jpg);
   background-size:cover;
   z-index: -1;
 }
@@ -70,9 +80,9 @@ body {
 }
 
 .card {
-  background-color: #0f4c5c !important; //dark blue teal
+  background-color: #0f4c5c !important;
   border-radius: 15px !important;
-  border: 2px solid #ff5714 !important; //orange;
+  border: 2px solid #ff5714 !important;
   opacity: .85 !important;
   max-width: 350px !important;
 }

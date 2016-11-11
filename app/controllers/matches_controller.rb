@@ -7,9 +7,9 @@ class MatchesController < ApplicationController
     @past_matches = []
     @matches.each do |match|
       match.each do |k,v|
-        if v['date'] > DateTime.now.strftime("%d/%m/%Y %H:%M")
+        if DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") > DateTime.now
           @upcoming_matches << match
-        elsif v['date'] < DateTime.now .strftime("%d/%m/%Y %H:%M")
+        elsif DateTime.strptime(v['date'],"%Y-%m-%d %H:%M") < DateTime.now
           @past_matches << match
         end
       end
@@ -19,13 +19,18 @@ class MatchesController < ApplicationController
   def show
     # @location = HTTParty.get(URL + 'matches/')
     @match = MatchesHelper.get(session, params['id'])
+    date = DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M")
+    @day = date.strftime("%b %d, %Y")
+    @time = date.strftime("%A %l:%M %p")
+    @location = @match["match"]["location"]
+    @sport = SportsHelper.get(@match["match"]["sport_id"])
     @home_team = @match['Home_team']
     @away_team = @match['Away_team']
   end
 
   def update
     @match = MatchesHelper.put(params['match_id'], session,params["score_1"],params["score_2"])
-    redirect_to user_path
+    redirect_to user_match_path(session[:id],params["match_id"])
   end
 
 end

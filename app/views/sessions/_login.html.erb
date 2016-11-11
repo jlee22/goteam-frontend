@@ -4,12 +4,14 @@
   <% end %>
   <div class="login">
   <%= form_tag sessions_path do %>
-    <%= label_tag :email %>:<br>
-    <%= text_field_tag :email %><br>
-    <%= label_tag :password %>:<br>
-    <%= text_field_tag :password %><br>
+    <p><%= label_tag :email %>:<br>
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+    <%= text_field_tag :email %><br></p>
+    <p><%= label_tag :password %>:<br>
+    <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+    <%= password_field_tag :password %><p>
     <div id='login-register'>
-    <%= submit_tag "Login", class:'btn-default' %>
+    <p><%= submit_tag "Login", class:'btn-default' %></p>
   <% end %>
     <%= link_to 'Register', new_user_path %>
     </div>

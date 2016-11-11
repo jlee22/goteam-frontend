@@ -4,7 +4,10 @@
 
       <div class="user-info-container">
         <% if @user %>
-        <h4>User Info:</h4>
+        <div class="profile-pic">
+          <%= image_tag('profile_pic/JLok.jpg')  %>
+        </div>
+
           <p> <i class="fa fa-user-circle" aria-hidden="true"></i>
             <span class="profile">
               <%= @user['first_name'] %> <%= @user['last_name'] %>
@@ -23,29 +26,14 @@
             </span> </p>
         <% end %>
         <h4 class='btn btn-primary'><%= link_to 'Play Sports!!', sports_path %></h4>
-      </div>
 
-      <div class="stats-container">
-        <% if @stats %>
-        <h4>User Stats:</h4>
-          <% @stats.each do |k, sport| %>
-          <div class='card card-block'>
-              <p><%if sport[1]['category'] == "Tennis"%>
-                Tennis <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-              <p><% elsif sport[1]['category'] == "Soccer"%>
-                Soccer <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-              <p><% elsif sport[1]['category'] == "Badminton"%>
-                Badminton <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-            <% end %>
-          </div>
-          <% end %>
-        <% end %>
+        <div id="stats-container">
+          <script type="text/javascript">
+            var user_id = "<%= session[:id]%>"
+            var token = "<%= session[:token] %>"
+          </script>
+
+        </div>
       </div>
 
       <div class="matches-container">
@@ -54,10 +42,12 @@
           <% @upcoming_matches.each do |match| %>
             <% match.each do |category,details| %>
               <% sport_icon = SportsHelper.get_sport_icon(category) %>
-              <div class='match-details-container card card-block'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
+              <div class='match-details-container card card-block'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %> <br>
                 <div class="details-container card-text">
                   <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
-                  <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %><br>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  <%= link_to 'Details' , user_match_path(current_user['id'],match[category]['id']) %>
                 </div>
               </div>
             <% end %>
@@ -72,15 +62,17 @@
               <div class='match-details-container card card-block'><%= image_tag(sport_icon, alt: 'sport-icon')%> <%= category %><br>
                 <div class="details-container">
                   <i class="fa fa-map-marker" aria-hidden="true"></i> <%= details['location'] %><br>
-                  <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i> <%= details['date'] %><br>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  <%= link_to 'Details' , user_match_path(current_user['id'],match[category]['id']) %>
                 </div>
               </div>
             <% end %>
           <% end %>
         <% end %>
-        <br>
         <div class="btn btn-primary">
-        <%= link_to 'All Past Matches', user_matches_path(current_user['id']) %></div>
+          <%= link_to 'All Matches', user_matches_path(current_user['id']) %></div>
+        <br>
       </div>
     </div>
 
