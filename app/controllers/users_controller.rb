@@ -2,10 +2,10 @@ class UsersController < ApplicationController
   include UsersHelper
   def show
     @user = UsersHelper.get(session)
-    @stats = StatsHelper.list(session) 
+    @stats = StatsHelper.list(session)
     @stats_array = []
     i = 0
-    while i < 4
+    while i < 10
       @stats_array << @stats[i.to_s]
       i += 1
     end
