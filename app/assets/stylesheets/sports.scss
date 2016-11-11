@@ -5,11 +5,11 @@
 // For the cancel search link
 
 // Color Palette
-// #ff5714 orange
-// #66c3ff light blue
-// #dce1e9 off white
-// #0f4c5c dark blue teal
-// #2e7689 grey teal
+// #ff5714
+// #66c3ff
+// #dce1e9
+// #0f4c5c
+// #2e7689
 
 .hidden {
   display: none
@@ -26,13 +26,17 @@
 h3 {
 text-align: center;
 padding: 5px;
+padding-top: 20px;
 }
 
 #sports-buttons-container, #sports-type-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 450px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+  width: 60%;
   margin: 0 auto;
   align-items: center;
 }
@@ -45,26 +49,35 @@ padding: 5px;
 .sport-button {
   background-color: rgba(0, 0, 0, 0);
   border:3px solid white;
-  margin-top: 3px;
+  margin: 5%;
+  margin-top: 7%;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 50%;
-  margin-right: 1%;
-  margin-top: 65px;
   position: relative;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 175px;
+  min-height: 175px;
 }
 
 .sport-button:hover {
-  transform: scale(1.25);
+  transform: scale(1.09);
 }
 
 .sport-button:active {
   transform: translateY(4px);
 }
 
+#sports-type-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 40%
+}
+
+#sports-type-container button {
+  margin: 5%;
+}
 
 #Tennis-button {
   background-image: url("sport_icons/tennis-ball.svg");
@@ -80,6 +93,38 @@ padding: 5px;
 
 #TableTennis-button {
   background-image: url("sport_icons/ping-pong.svg")
+}
+
+#Basketball-button {
+  background-image: url("sport_icons/basketball.svg")
+}
+
+#Volleyball-button {
+  background-image: url("sport_icons/volleyball.svg")
+}
+
+#FlagFootball-button {
+  background-image: url("sport_icons/flag_football.svg")
+}
+
+#Bowling-button {
+  background-image: url("sport_icons/bowling.svg")
+}
+
+#Rails-button {
+  background-image: url("sport_icons/browser.svg")
+}
+
+#Golf-button {
+  background-image: url("sport_icons/golf.svg")
+}
+
+#UltimateFrisbee-button {
+  background-image: url("sport_icons/frisbee.svg")
+}
+
+#Billiards-button {
+  background-image: url("sport_icons/billiards.svg")
 }
 
 #sport-info-container {
