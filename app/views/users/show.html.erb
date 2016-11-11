@@ -26,29 +26,14 @@
             </span> </p>
         <% end %>
         <h4 class='btn btn-primary'><%= link_to 'Play Sports!!', sports_path %></h4>
-      </div>
 
-      <div class="stats-container">
-        <% if @stats %>
-        <h4>User Stats:</h4>
-          <% @stats.each do |k, sport| %>
-          <div class='card card-block'>
-              <p><%if sport[1]['category'] == "Tennis"%>
-                Tennis <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-              <p><% elsif sport[1]['category'] == "Soccer"%>
-                Soccer <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-              <p><% elsif sport[1]['category'] == "Badminton"%>
-                Badminton <%= sport[1]['name'] %> Stats:<br>
-                Rating: <%= sport[0]['rating'] %><br>
-                Division: <%= sport[0]['division'] %></p>
-            <% end %>
-          </div>
-          <% end %>
-        <% end %>
+        <div id="stats-container">
+          <script type="text/javascript">
+            var user_id = "<%= session[:id]%>"
+            var token = "<%= session[:token] %>"
+          </script>
+
+        </div>
       </div>
 
       <div class="matches-container">
