@@ -27,16 +27,14 @@
         <% end %>
         <h4 class='btn btn-primary'><%= link_to 'Play Sports!!', sports_path %></h4>
 
-          <div id="stats-container">
+        <div id="stats-container">
           <script type="text/javascript">
             var user_id = "<%= session[:id]%>"
             var token = "<%= session[:token] %>"
           </script>
 
-          </div>
+        </div>
       </div>
-
-
 
       <div class="matches-container">
         <% if @upcoming_matches.count > 0 %>

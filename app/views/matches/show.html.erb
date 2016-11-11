@@ -11,20 +11,21 @@
             <%= render partial: 'matches/team', locals: { team: @home_team} %>
         </div>
         <div id="vs-container">
-          <h3>VS</h3>
+          <h2>VS</h2>
         </div>
         <div id="away-team-container" class="team-container">
             <h2>Away Team</h2>
             <%= render partial: 'matches/team', locals: { team: @away_team} %>
         </div>
     </div>
+    <div class="match-score-container">
       <% if DateTime.strptime(@match["match"]["date"],"%Y-%m-%d %H:%M") < DateTime.now%>
         <% if @match["Home"]["updated?"] == "true" &&  @match["Away"]["updated?"] == "true" %>
         <div class="">
-            Home :
-            <%= @match["Home"]["score"]  %>
+            <h3>Home :
+            <%= @match["Home"]["score"]  %>  &nbsp-&nbsp
             Away :
-            <%= @match["Away"]["score"]  %>
+            <%= @match["Away"]["score"]  %></h3>
         </div>
         <% else %>
         <div class="score-container">
@@ -36,5 +37,5 @@
           You may update the score after the match has finished.
         </h4>
       <% end %>
-
+    </div>
 </div>

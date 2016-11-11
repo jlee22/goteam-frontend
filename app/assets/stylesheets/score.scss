@@ -1,0 +1,37 @@
+.match-score-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.score-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.score-form-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  width: auto;
+  background-color: rgba(220, 225, 233, .7);
+  border: 1px solid rgba(70, 70, 70, 1);
+  border-radius: 20px;
+  padding: 1em;
+  color: rgba(15, 76, 92, 1);
+}
+
+.score-input {
+  display: flex;
+}
+
+.submit{
+  margin-top: 5%;
+  text-align: center;
+}
+
+.team-1-score {
+  margin-right: 30px;
+}

@@ -1,16 +1,19 @@
-<div class="score-container">
+<div class="score-form-container">
   <%= form_tag matches_edit_path,class:"score-form", remote: true do %>
+  <div class="score-input">
     <div class="team-1-score">
-      Home Team Score:<%= text_field_tag :score_1 %>
+      Home Score:<br>
+      <%= text_field_tag(:score_1, nil , options={:size=>5})%>
     </div>
     <div class="team-2-score">
-      Away Team Score:
-      <%= text_field_tag :score_2 %>
+      Away Score:<br>
+      <%= text_field_tag(:score_2, nil , options={:size=>11})%>
     </div>
+  </div>
       <%= hidden_field_tag("match_id",
       match["match"]["id"]) %>
     <div class="submit">
-      <%= submit_tag 'Send Scores' %>
+      <%= submit_tag 'Submit', class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
