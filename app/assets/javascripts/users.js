@@ -41,7 +41,9 @@ function loadBarGraph(ratings) {
   $(function() {
     Highcharts.chart('stats-container', {
       chart: {
-        type: 'bar'
+        type: 'bar',
+        height: 700,
+        backgroundColor: '#0f4c5c'
       },
       title: {
         text: 'My Sport Ratings'
