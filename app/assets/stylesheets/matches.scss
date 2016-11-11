@@ -82,6 +82,7 @@
   margin: auto;
   width: 50%;
   padding: 10px;
+
 }
 .away-team-container {
   padding: 10px;
@@ -91,11 +92,13 @@
 #home-team-container {
   position: absolute;
   left: -50%;
+  overflow: hidden
 }
 
 #away-team-container {
   position: absolute;
   right: -50%;
+  overflow: hidden
 }
 
 .team{
@@ -112,6 +115,7 @@
 
 #vs-container {
   vertical-align: middle;
+  display: none;
 }
 
 #all-matches-container {
@@ -171,4 +175,10 @@
   padding: 1px;
   padding-right: 3px;
   padding-left: 3px
+}
+
+.match-score-container {
+  text-align: center;
+  position: relative;
+  bottom: -50%;
 }
