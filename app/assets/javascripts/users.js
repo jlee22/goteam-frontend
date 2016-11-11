@@ -42,14 +42,21 @@ function loadBarGraph(ratings) {
     Highcharts.chart('stats-container', {
       chart: {
         type: 'bar',
-        height: 700,
+        height: 650,
         backgroundColor: '#0f4c5c'
       },
       title: {
-        text: 'My Sport Ratings'
+        text: 'My Sport Ratings',
+          style: {
+                    color: 'white',
+                    fontSize:'15px'}
       },
       xAxis: {
         categories: names,
+        labels: {
+                style: {
+                    color: 'white',
+                    fontSize:'15px'}},
         title: {
           text: null
         }
@@ -59,10 +66,16 @@ function loadBarGraph(ratings) {
         max: 100,
         title: {
           text: 'Rating',
-          align: 'high'
+          align: 'high',
+          style: {
+                    color: 'white',
+                    fontSize:'15px'}
         },
         labels: {
-          overflow: 'justify'
+          overflow: 'justify',
+          style: {
+                    color: 'white',
+                    fontSize:'15px'}
         }
       },
       tooltip: {
@@ -75,22 +88,11 @@ function loadBarGraph(ratings) {
           }
         }
       },
-      legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
-      },
       credits: {
         enabled: false
       },
       series: [{
-        name: "Fall 2016",
+        name:'Fall 2016',
         data: configRatings
       }]
     });

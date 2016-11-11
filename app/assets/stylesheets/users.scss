@@ -24,7 +24,9 @@
 
 .user-info-container {
   margin-top:2%;
-  width: 32%;
+  width: 40%;
+  margin-right:5%;
+  margin-left: 10%;
 }
 
 .user-info-container a {
@@ -60,14 +62,15 @@
 }
 
 #stats-container {
-  // min-width: 25%;
+  border: 1px solid #ff5714;
+  border-radius: 20px;
+  overflow: hidden;
   max-width: 90%;
   margin-top: 3%;
-  // margin-right: 4%;
 }
 .matches-container {
   margin-top:2%;
-  width: 32%;
+  width: 40%;
 }
 
 .matches-container img {
