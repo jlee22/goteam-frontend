@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = sign_in
+    p @user
     if @user.parsed_response["message"]
       flash[:notice] = "Wrong Email or Password"
       redirect_to "/"
