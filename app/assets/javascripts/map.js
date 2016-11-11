@@ -26,12 +26,12 @@ function initMap() {
    });
 
     markers.forEach(function(marker){
-      marker.addListener('click', function() {
+      marker.addListener('dblclick', function() {
         map.setZoom(15);
         map.setCenter(marker.getPosition());
 
       });
-      marker.addListener('dblclick', function() {
+      marker.addListener('click', function() {
         console.log(marker.url);
         window.location.href = '/users/1/matches/1/';
         window.location.replace("/users/1/matches/1/");
