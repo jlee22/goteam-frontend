@@ -8,6 +8,8 @@ class StatsController < ApplicationController
     @stat = StatsHelper.update(params["user_id"],params["id"],session,params["active"])
     if params["active"] == "true"
       created_match = MatchesHelper.create(session, @stat["sport_id"])
+      p line 
+      p created_match
       if created_match["message"]
         @message = created_match["message"].to_s
         @sport = params["sport"]

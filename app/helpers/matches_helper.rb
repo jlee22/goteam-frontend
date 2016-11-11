@@ -12,7 +12,7 @@ module MatchesHelper
   end
 
   def self.create(session,sport_id)
-    HTTParty.post(URL + "/users/"+ session[:id].to_s + "/teams.json?token=" + session[:token].to_s,body: {sport_id: sport_id}).parsed_response
+    HTTParty.post(URL + "/users/"+ session[:id].to_s + "/tefams.json?token=" + session[:token].to_s,body: {sport_id: sport_id}).parsed_response
   end
 
   def self.put(id, session,home_team,away_team)
