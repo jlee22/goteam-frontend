@@ -30,8 +30,9 @@
 
       <div class="stats-container">
         <% if @stats %>
+
         <h4>User Stats:</h4>
-          <% @stats.each do |k, sport| %>
+          <% @stats_array.each do |sport| %>
           <div class='card card-block'>
               <p><%if sport[1]['category'] == "Tennis"%>
                 Tennis <%= sport[1]['name'] %> Stats:<br>
