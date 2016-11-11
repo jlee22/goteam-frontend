@@ -89,11 +89,13 @@
 }
 
 #home-team-container {
-  position: relative;
+  position: absolute;
+  left: -50%;
 }
 
 #away-team-container {
-  position: relative;
+  position: absolute;
+  right: -50%;
 }
 
 .team{
