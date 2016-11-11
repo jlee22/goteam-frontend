@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   include UsersHelper
   def show
     @user = UsersHelper.get(session)
-    @stats = StatsHelper.list(session)
+    @stats = StatsHelper.list(session) 
     @stats_array = []
     i = 0
     while i < 4
