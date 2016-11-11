@@ -7,7 +7,6 @@ class SportsController < ApplicationController
   end
 
   def show
-
     @sport = SportsHelper.get(params["id"])
     @stat = StatsHelper.post(params["id"], session)
     if @stat.parsed_response["message"]
