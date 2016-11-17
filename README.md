@@ -9,7 +9,7 @@ It is generally difficult to find casual pick-up games across most recreational 
 This application is mean to provide matchmaking service and automation for casual athletes across all popular sports with an exciting and easy to use interface.
 
 #Screenshots
-[Imgur](http://i.imgur.com/TYQQp05.png)
+![Imgur](http://i.imgur.com/TYQQp05.png)
 
 
 ###Software Versions
