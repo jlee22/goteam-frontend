@@ -11,6 +11,13 @@ This application is meant to provide matchmaking service and automation for casu
 #Screenshots
 ![Imgur](http://i.imgur.com/TYQQp05.png)
 
+#Features
+- User Authentication
+- Map data of nearby matches
+- Personal statistics
+- Automated Matchmaking
+- Video tutorials
+- Division System
 
 ###Software Versions
 -ruby 2.3.1p112
@@ -21,6 +28,7 @@ This application is meant to provide matchmaking service and automation for casu
 
 ###System Dependencies
 -Depends on api-goteam.herokuapp.com
+[GitHub Repo](https://github.com/lokpio/goteam-backend)
 
 ###Deployment Instructions:
 -Regular Rails Application Deployment
